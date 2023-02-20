@@ -56,7 +56,7 @@ class _ContactsPage extends StatelessWidget {
         Column(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('me.png'),
+              backgroundImage: AssetImage('assets/images/me.png'),
               maxRadius: 120,
               minRadius: 50,
             ),
@@ -173,51 +173,51 @@ class _WhoIAmPage extends StatelessWidget {
                   alignment: WrapAlignment.center,
                   children: [
                     const TechnologyCard(
-                      asset: 'flutter.png',
+                      asset: 'assets/images/flutter.png',
                       label: 'Flutter',
                     ),
                     const TechnologyCard(
-                      asset: 'dart.png',
+                      asset: 'assets/images/dart.png',
                       label: 'Dart',
                     ),
                     const TechnologyCard(
-                      asset: 'python.png',
+                      asset: 'assets/images/python.png',
                       label: 'Python',
                     ),
                     const TechnologyCard(
-                      asset: 'kotlin.png',
+                      asset: 'assets/images/kotlin.png',
                       label: 'Kotlin',
                     ),
                     const TechnologyCard(
-                      asset: 'swift.png',
+                      asset: 'assets/images/swift.png',
                       label: 'Swift',
                     ),
                     const TechnologyCard(
-                      asset: 'c.png',
+                      asset: 'assets/images/c.png',
                       label: 'C',
                     ),
                     const TechnologyCard(
-                      asset: 'c_sharp.png',
+                      asset: 'assets/images/c_sharp.png',
                       label: 'C#',
                     ),
                     const TechnologyCard(
-                      asset: 'java.png',
+                      asset: 'assets/images/java.png',
                       label: 'Java',
                     ),
                     const TechnologyCard(
-                      asset: 'javascript.png',
+                      asset: 'assets/images/javascript.png',
                       label: 'Javascript',
                     ),
                     const TechnologyCard(
-                      asset: 'typescript.png',
+                      asset: 'assets/images/typescript.png',
                       label: 'Typescript',
                     ),
                     const TechnologyCard(
-                      asset: 'git.png',
+                      asset: 'assets/images/git.png',
                       label: 'Git',
                     ),
                     const TechnologyCard(
-                      asset: 'firebase.png',
+                      asset: 'assets/images/firebase.png',
                       label: 'Firebase',
                     ),
                   ],
