@@ -71216,7 +71216,7 @@ s=A.a([new A.KY(q,r),new A.QX(q,r)],t.F)
 return new A.wh(A.amz(new A.cV(B.hb,new A.wi(B.at,q,new A.a6L(s,A.aI([null,0],t.LO,t.S)),r),r),q),r)}}
 A.KY.prototype={
 J(a){var s=null,r=t.F
-return A.mh(A.a([A.mh(A.a([new A.CZ(new A.tf("me.png",s,s),50,120,s),A.da(s,16,s),A.is("Pedro Lemos",s,A.a0(a).p3.a,B.bU,s),A.is("Computer Scientist and Software Engineer",s,A.a0(a).p3.e,B.bU,s)],r),B.au,B.bs,B.aK),A.da(s,16,s),A.mh(A.a([A.Ii(A.a([new A.kJ(B.B7,"LinkedIn",s),new A.kJ(B.B6,"GitHub",s),new A.kJ(B.B5,"Email",s)],r),B.au,B.d4,B.aK),A.Ii(A.a([new A.kJ(B.nx,"Resume (EN)",s),new A.kJ(B.nx,"Resume (PT)",s)],r),B.au,B.d4,B.aK)],r),B.au,B.bs,B.aK),A.uS(s,A.FK(B.B3,24),s,new A.aa3(this),24,s)],r),B.au,B.d4,B.aK)}}
+return A.mh(A.a([A.mh(A.a([new A.CZ(new A.tf("assets/images/me.png",s,s),50,120,s),A.da(s,16,s),A.is("Pedro Lemos",s,A.a0(a).p3.a,B.bU,s),A.is("Computer Scientist and Software Engineer",s,A.a0(a).p3.e,B.bU,s)],r),B.au,B.bs,B.aK),A.da(s,16,s),A.mh(A.a([A.Ii(A.a([new A.kJ(B.B7,"LinkedIn",s),new A.kJ(B.B6,"GitHub",s),new A.kJ(B.B5,"Email",s)],r),B.au,B.d4,B.aK),A.Ii(A.a([new A.kJ(B.nx,"Resume (EN)",s),new A.kJ(B.nx,"Resume (PT)",s)],r),B.au,B.d4,B.aK)],r),B.au,B.bs,B.aK),A.uS(s,A.FK(B.B3,24),s,new A.aa3(this),24,s)],r),B.au,B.d4,B.aK)}}
 A.aa3.prototype={
 $0(){var s=this.a.c,r=A.c7(0,400),q=t.gQ.a(B.b.gbm(s.d)),p=q.gnH(q)
 p.toString
@@ -71224,7 +71224,7 @@ return s.K9(B.d.b9(p)+1,B.e_,r)},
 $S:0}
 A.QX.prototype={
 J(a){var s=null,r=t.F
-return new A.IO(A.mh(A.a([A.uS(s,A.FK(B.B4,24),s,new A.aeA(this),24,s),A.da(s,32,s),A.mh(A.a([A.is("Who I Am?",s,A.a0(a).p3.d,B.bU,s),A.da(s,16,s),A.da(new A.xw($.aqw(),A.a0(a).p3.w,B.fc,s),s,600),A.da(s,32,s),A.is("Languages, Frameworks and Technologies",s,A.a0(a).p3.d,B.fb,s),A.da(s,16,s),A.da(new A.Kg(B.P8,A.a([B.J5,B.IY,B.J6,B.J2,B.IX,B.J_,B.J0,B.J3,B.J4,B.J1,B.J7,B.IZ],r),s),s,600)],r),B.fY,B.bs,B.aK)],r),B.au,B.d4,B.aK),s)}}
+return new A.IO(A.mh(A.a([A.uS(s,A.FK(B.B4,24),s,new A.aeA(this),24,s),A.da(s,32,s),A.mh(A.a([A.is("Who I Am?",s,A.a0(a).p3.d,B.bU,s),A.da(s,16,s),A.da(new A.xw($.aqw(),A.a0(a).p3.w,B.fc,s),s,600),A.da(s,32,s),A.is("Languages, Frameworks and Technologies",s,A.a0(a).p3.d,B.fb,s),A.da(s,16,s),A.da(new A.Kg(B.P8,A.a([B.J5,B.IY,B.J2,B.J3,B.J1,B.J7,B.J4,B.J6,B.J_,B.J0,B.IX,B.IZ],r),s),s,600)],r),B.fY,B.bs,B.aK)],r),B.au,B.d4,B.aK),s)}}
 A.aez.prototype={
 $2(a,b){return a+(" "+b)},
 $S:145}
@@ -75980,18 +75980,18 @@ B.IT=new A.ir(B.m,null,B.W,null,null,B.Q,B.W,null)
 B.IU=new A.ir(B.m,null,B.W,null,null,B.W,B.Q,null)
 B.IV=new A.y_(null,null,null,null,null,null,null,null,null,null,null,null)
 B.IW=new A.a7r("tap")
-B.IX=new A.el("swift.png","Swift",null)
-B.IY=new A.el("dart.png","Dart",null)
-B.IZ=new A.el("firebase.png","Firebase",null)
-B.J_=new A.el("c.png","C",null)
-B.J0=new A.el("c_sharp.png","C#",null)
-B.J1=new A.el("typescript.png","Typescript",null)
-B.J2=new A.el("kotlin.png","Kotlin",null)
-B.J3=new A.el("java.png","Java",null)
-B.J4=new A.el("javascript.png","Javascript",null)
-B.J5=new A.el("flutter.png","Flutter",null)
-B.J6=new A.el("python.png","Python",null)
-B.J7=new A.el("git.png","Git",null)
+B.IX=new A.el("assets/images/git.png","Git",null)
+B.IY=new A.el("assets/images/dart.png","Dart",null)
+B.IZ=new A.el("assets/images/firebase.png","Firebase",null)
+B.J_=new A.el("assets/images/javascript.png","Javascript",null)
+B.J0=new A.el("assets/images/typescript.png","Typescript",null)
+B.J1=new A.el("assets/images/swift.png","Swift",null)
+B.J2=new A.el("assets/images/python.png","Python",null)
+B.J3=new A.el("assets/images/kotlin.png","Kotlin",null)
+B.J4=new A.el("assets/images/c_sharp.png","C#",null)
+B.J5=new A.el("assets/images/flutter.png","Flutter",null)
+B.J6=new A.el("assets/images/java.png","Java",null)
+B.J7=new A.el("assets/images/c.png","C",null)
 B.n=new A.qB(0,"alphabetic")
 B.J8=new A.y2(null)
 B.lg=new A.nC(3,"none")
