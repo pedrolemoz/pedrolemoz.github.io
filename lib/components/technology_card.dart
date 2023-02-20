@@ -21,7 +21,7 @@ class TechnologyCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(asset, scale: 9),
+              Image.network(asset, scale: 9),
               SizedBox(height: 16),
               Text(
                 label,
