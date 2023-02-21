@@ -18,6 +18,10 @@ class Assets {
   static const swift = '$_base/swift.png';
   static const typescript = '$_base/typescript.png';
 
-  static final resumeEng = Uri.parse('$_base/pedro_lemos_resume_eng.pdf');
-  static final resumePor = Uri.parse('$_base/pedro_lemos_resume_por.pdf');
+  static final resumeEnglish = Uri.parse(
+    '$_base/pedro_lemos_resume_english.pdf',
+  );
+  static final resumePortuguese = Uri.parse(
+    '$_base/pedro_lemos_resume_portuguese.pdf',
+  );
 }

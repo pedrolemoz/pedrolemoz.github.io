@@ -100,12 +100,12 @@ class _ContactsPage extends StatelessWidget {
             LabeledButton(
               text: 'Resume (EN)',
               icon: UniconsLine.file_download,
-              onTap: () => launchUrl(Assets.resumeEng),
+              onTap: () => launchUrl(Assets.resumeEnglish),
             ),
             LabeledButton(
               text: 'Resume (PT)',
               icon: UniconsLine.file_download,
-              onTap: () => launchUrl(Assets.resumeEng),
+              onTap: () => launchUrl(Assets.resumePortuguese),
             ),
           ],
         ),
