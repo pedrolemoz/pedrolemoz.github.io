@@ -8,28 +8,24 @@ class TechnologyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8),
-      child: Card(
-        elevation: 1,
-        margin: EdgeInsets.zero,
-        child: Container(
-          width: 130,
-          height: 130,
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.network(asset, scale: 9),
-              SizedBox(height: 16),
-              Text(
-                label,
-                style: Theme.of(context).textTheme.titleMedium,
-                textAlign: TextAlign.center,
-              )
-            ],
-          ),
+    return Card(
+      elevation: 1,
+      margin: EdgeInsets.all(4),
+      child: Container(
+        width: 140,
+        height: 140,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.network(asset, scale: 9),
+            SizedBox(height: 16),
+            Text(
+              label,
+              style: Theme.of(context).textTheme.titleMedium,
+              textAlign: TextAlign.center,
+            )
+          ],
         ),
       ),
     );
