@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../assets/assets.dart';
+import '../assets/links.dart';
 import '../components/labeled_button.dart';
 import '../components/technology_card.dart';
 import '../layout/page_skeleton.dart';
@@ -75,9 +77,21 @@ class _ContactsPage extends StatelessWidget {
         Wrap(
           alignment: WrapAlignment.center,
           children: [
-            LabeledButton(text: 'LinkedIn', icon: UniconsLine.linkedin),
-            LabeledButton(text: 'GitHub', icon: UniconsLine.github),
-            LabeledButton(text: 'Email', icon: UniconsLine.envelope),
+            LabeledButton(
+              text: 'LinkedIn',
+              icon: UniconsLine.linkedin,
+              onTap: () => launchUrl(Links.linkedIn),
+            ),
+            LabeledButton(
+              text: 'GitHub',
+              icon: UniconsLine.github,
+              onTap: () => launchUrl(Links.gitHub),
+            ),
+            LabeledButton(
+              text: 'Email',
+              icon: UniconsLine.envelope,
+              onTap: () => launchUrl(Links.email),
+            ),
           ],
         ),
         Wrap(
@@ -86,10 +100,12 @@ class _ContactsPage extends StatelessWidget {
             LabeledButton(
               text: 'Resume (EN)',
               icon: UniconsLine.file_download,
+              onTap: () => launchUrl(Assets.resumeEng),
             ),
             LabeledButton(
               text: 'Resume (PT)',
               icon: UniconsLine.file_download,
+              onTap: () => launchUrl(Assets.resumeEng),
             ),
           ],
         ),

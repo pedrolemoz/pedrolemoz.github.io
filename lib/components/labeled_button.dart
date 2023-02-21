@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 class LabeledButton extends StatelessWidget {
   final IconData icon;
   final String text;
+  final Function() onTap;
 
   const LabeledButton({
     super.key,
     required this.icon,
     required this.text,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onTap,
       child: IntrinsicWidth(
         child: Padding(
           padding: const EdgeInsets.all(8),
