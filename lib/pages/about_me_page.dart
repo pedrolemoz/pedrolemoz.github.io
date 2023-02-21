@@ -25,18 +25,16 @@ class _AboutMePageState extends State<AboutMePage> {
   @override
   Widget build(BuildContext context) {
     return PageSkeleton(
-      child: Scrollbar(
-        controller: pageController,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: PageView(
-            controller: pageController,
-            scrollDirection: Axis.vertical,
-            children: [
-              _ContactsPage(pageController: pageController),
-              _WhoIAmPage(pageController: pageController),
-            ],
-          ),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: PageView(
+          physics: NeverScrollableScrollPhysics(),
+          controller: pageController,
+          scrollDirection: Axis.vertical,
+          children: [
+            _ContactsPage(pageController: pageController),
+            _WhoIAmPage(pageController: pageController),
+          ],
         ),
       ),
     );
@@ -166,7 +164,7 @@ class _WhoIAmPage extends StatelessWidget {
               SizedBox(
                 width: 600,
                 child: Wrap(
-                  alignment: WrapAlignment.center,
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     const TechnologyCard(
                       asset: Assets.flutter,
