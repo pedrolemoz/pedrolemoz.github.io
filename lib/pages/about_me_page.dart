@@ -6,6 +6,7 @@ import '../assets/assets.dart';
 import '../assets/links.dart';
 import '../components/labeled_button.dart';
 import '../components/technology_card.dart';
+import '../extensions/list_extension.dart';
 import '../layout/page_skeleton.dart';
 
 class AboutMePage extends StatefulWidget {
@@ -135,7 +136,7 @@ class _WhoIAmPage extends StatelessWidget {
     'I like to develop large and complex applications, and always give the user the best experience possible.',
     'I work better in high collaborative teams, where I can learn and share my experience with others.',
     'Focused primarily in mobile development, but I have interest in back-end technologies too.',
-  ].reduce((a, b) => a += ' $b');
+  ].merge;
 
   @override
   Widget build(BuildContext context) {
