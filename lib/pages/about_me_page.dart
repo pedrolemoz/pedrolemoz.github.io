@@ -54,53 +54,48 @@ class _ContactsPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Column(
-          children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(Assets.me),
-              maxRadius: 120,
-              minRadius: 50,
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Pedro Lemos',
-              style: Theme.of(context).textTheme.displayLarge,
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              'Computer Scientist and Software Engineer',
-              style: Theme.of(context).textTheme.headlineMedium,
-              textAlign: TextAlign.center,
-            ),
-            // SizedBox(height: 16),
-          ],
+        CircleAvatar(
+          backgroundImage: NetworkImage(Assets.me),
+          maxRadius: 100,
+          minRadius: 50,
         ),
         SizedBox(height: 16),
-        Column(
+        Text(
+          'Pedro Lemos',
+          style: Theme.of(context)
+              .textTheme
+              .displayMedium!
+              .copyWith(fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        Text(
+          'Software Engineer',
+          style: Theme.of(context).textTheme.headlineSmall,
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(height: 16),
+        Wrap(
+          alignment: WrapAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                LabeledButton(text: 'LinkedIn', icon: UniconsLine.linkedin),
-                LabeledButton(text: 'GitHub', icon: UniconsLine.github),
-                LabeledButton(text: 'Email', icon: UniconsLine.envelope),
-              ],
+            LabeledButton(text: 'LinkedIn', icon: UniconsLine.linkedin),
+            LabeledButton(text: 'GitHub', icon: UniconsLine.github),
+            LabeledButton(text: 'Email', icon: UniconsLine.envelope),
+          ],
+        ),
+        Wrap(
+          alignment: WrapAlignment.center,
+          children: [
+            LabeledButton(
+              text: 'Resume (EN)',
+              icon: UniconsLine.file_download,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                LabeledButton(
-                  text: 'Resume (EN)',
-                  icon: UniconsLine.file_download,
-                ),
-                LabeledButton(
-                  text: 'Resume (PT)',
-                  icon: UniconsLine.file_download,
-                ),
-              ],
+            LabeledButton(
+              text: 'Resume (PT)',
+              icon: UniconsLine.file_download,
             ),
           ],
         ),
+        SizedBox(height: 32),
         IconButton(
           splashRadius: 24,
           onPressed: () => pageController.nextPage(
@@ -163,7 +158,7 @@ class _WhoIAmPage extends StatelessWidget {
               ),
               SizedBox(height: 32),
               Text(
-                'Languages, Frameworks and Technologies',
+                'Technologies',
                 style: Theme.of(context).textTheme.headlineLarge,
                 textAlign: TextAlign.left,
               ),
@@ -214,7 +209,7 @@ class _WhoIAmPage extends StatelessWidget {
                       label: 'Typescript',
                     ),
                     const TechnologyCard(
-                      asset:Assets.git,
+                      asset: Assets.git,
                       label: 'Git',
                     ),
                     const TechnologyCard(
