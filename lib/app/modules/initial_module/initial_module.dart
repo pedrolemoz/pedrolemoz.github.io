@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../core/utils/routes.dart';
-import '../core/utils/transitions.dart';
+import '../../core/utils/routes.dart';
+import '../../core/utils/transitions.dart';
 import 'pages/initial_page.dart';
 
 class InitialModule extends Module {
