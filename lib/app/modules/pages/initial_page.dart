@@ -6,8 +6,8 @@ import '../../core/assets/assets.dart';
 import '../../core/assets/links.dart';
 import '../../core/components/labeled_button.dart';
 
-class AboutMePage extends StatelessWidget {
-  const AboutMePage({super.key});
+class InitialPage extends StatelessWidget {
+  const InitialPage({super.key});
 
   @override
   Widget build(BuildContext context) {

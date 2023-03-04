@@ -1,9 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../core/utils/transitions.dart';
-import 'pages/about_me_page.dart';
+import 'pages/initial_page.dart';
 
-class AboutMeModule extends Module {
+class InitialModule extends Module {
   @override
   List<Bind> get binds => const [];
 
@@ -11,7 +11,7 @@ class AboutMeModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, __) => AboutMePage(),
+          child: (_, __) => InitialPage(),
           transition: TransitionType.custom,
           customTransition: routeTransition,
         )

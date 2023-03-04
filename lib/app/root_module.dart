@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'core/utils/transitions.dart';
-import 'modules/about_me_module.dart';
+import 'modules/initial_module.dart';
 
 class RootModule extends Module {
   @override
@@ -11,7 +11,7 @@ class RootModule extends Module {
   List<ModularRoute> get routes => [
         ModuleRoute(
           '/',
-          module: AboutMeModule(),
+          module: InitialModule(),
           transition: TransitionType.custom,
           customTransition: moduleTransition,
         ),
