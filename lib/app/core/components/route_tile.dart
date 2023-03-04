@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../utils/routes.dart';
-
 class RouteTile extends StatelessWidget {
-  final Routes route;
+  final String route;
+  final String title;
 
-  const RouteTile({super.key, required this.route});
+  const RouteTile({super.key, required this.route, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(route.title),
+      title: Text(title),
       onTap: () {
         final routeName = Modular.to.path;
-        if (routeName == route.value) {
+        if (routeName == route) {
           Modular.to.maybePop();
         } else {
-          Modular.to.pushReplacementNamed(route.value);
+          Modular.to.pushReplacementNamed(route);
         }
       },
     );

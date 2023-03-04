@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 
-import '../utils/routes.dart';
 import 'route_tile.dart';
 
 class NavigationMenuDrawer extends StatelessWidget {
   const NavigationMenuDrawer({super.key});
 
+  static const _routes = [
+    {'route': '/', 'title': 'Home'},
+    {'route': '/about_me/', 'title': 'About me'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView.builder(
-        itemCount: Routes.values.length,
+        itemCount: _routes.length,
         itemBuilder: (context, index) {
-          final route = Routes.values[index];
-          return RouteTile(route: route);
+          final element = _routes[index];
+          final route = element['route']!;
+          final title = element['title']!;
+          return RouteTile(route: route, title: title);
         },
       ),
     );
