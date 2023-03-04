@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:unicons/unicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/assets/assets.dart';
 import '../../core/assets/links.dart';
 import '../../core/components/labeled_button.dart';
+import '../../core/utils/routes.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({super.key});
@@ -12,10 +14,8 @@ class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('About me'),
-        centerTitle: true,
-      ),
+      drawer: NavigationMenuDrawer(),
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -81,6 +81,44 @@ class InitialPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class NavigationMenuDrawer extends StatelessWidget {
+  const NavigationMenuDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView.builder(
+        itemCount: Routes.values.length,
+        itemBuilder: (context, index) {
+          final route = Routes.values[index];
+          return RouteTile(route: route);
+        },
+      ),
+    );
+  }
+}
+
+class RouteTile extends StatelessWidget {
+  final Routes route;
+
+  const RouteTile({super.key, required this.route});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(route.title),
+      onTap: () {
+        final routeName = Modular.to.path;
+        if (routeName == route.value) {
+          Modular.to.maybePop();
+        } else {
+          Modular.to.pushReplacementNamed(route.value);
+        }
+      },
     );
   }
 }
