@@ -12,8 +12,8 @@ class TechnologyCard extends StatelessWidget {
       elevation: 1,
       margin: EdgeInsets.all(4),
       child: Container(
-        width: 140,
-        height: 140,
+        width: 135,
+        height: 135,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

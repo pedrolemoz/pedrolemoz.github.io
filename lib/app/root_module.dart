@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'core/utils/transitions.dart';
 import 'modules/about_me_module/about_me_module.dart';
 import 'modules/initial_module/initial_module.dart';
+import 'modules/work_experience_module/work_experience_module.dart';
 
 class RootModule extends Module {
   @override
@@ -19,6 +20,12 @@ class RootModule extends Module {
         ModuleRoute(
           '/about_me',
           module: AboutMeModule(),
+          transition: TransitionType.custom,
+          customTransition: moduleTransition,
+        ),
+        ModuleRoute(
+          '/work_experience',
+          module: WorkExperienceModule(),
           transition: TransitionType.custom,
           customTransition: moduleTransition,
         ),
