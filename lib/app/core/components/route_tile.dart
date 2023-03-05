@@ -16,7 +16,7 @@ class RouteTile extends StatelessWidget {
         if (routeName == route) {
           Modular.to.maybePop();
         } else {
-          Modular.to.pushReplacementNamed(route);
+          Modular.to.navigate(route);
         }
       },
     );
