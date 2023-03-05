@@ -52,7 +52,7 @@ class AboutMePage extends StatelessWidget {
               SizedBox(
                 width: 600,
                 child: Wrap(
-                  alignment: WrapAlignment.spaceEvenly,
+                  alignment: WrapAlignment.spaceBetween,
                   children: [
                     const TechnologyCard(
                       asset: Assets.flutter,
