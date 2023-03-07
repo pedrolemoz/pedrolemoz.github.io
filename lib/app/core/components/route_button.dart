@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class RouteTile extends StatelessWidget {
+class RouteButton extends StatelessWidget {
   final String route;
   final String title;
   final bool boldTitle;
 
-  const RouteTile({
+  const RouteButton({
     super.key,
     required this.route,
     required this.title,
@@ -15,15 +15,19 @@ class RouteTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        title,
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium
-            ?.copyWith(fontWeight: boldTitle ? FontWeight.bold : null),
+    return TextButton(
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Text(
+          title,
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium
+              ?.copyWith(fontWeight: boldTitle ? FontWeight.bold : null),
+          textAlign: TextAlign.center,
+        ),
       ),
-      onTap: () {
+      onPressed: () {
         final routeName = Modular.to.path;
         if (routeName == route) {
           Modular.to.maybePop();
