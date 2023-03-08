@@ -15,10 +15,10 @@ class AboutMePage extends StatelessWidget {
     return ResponsiveLayout(
       onDesktop: () {
         return Scaffold(
-          body: Column(
+          body: ListView(
             children: [
               NavigationMenuHeader(),
-              Expanded(child: _AboutMeContent()),
+              _AboutMeContent(),
             ],
           ),
         );
