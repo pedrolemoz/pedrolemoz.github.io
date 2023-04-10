@@ -6,7 +6,7 @@ class WorkExperienceCard extends StatelessWidget {
   final String role;
   final String company;
   final DateTime startDate;
-  final DateTime endDate;
+  final DateTime? endDate;
   final String description;
 
   const WorkExperienceCard({
@@ -14,7 +14,7 @@ class WorkExperienceCard extends StatelessWidget {
     required this.role,
     required this.company,
     required this.startDate,
-    required this.endDate,
+    this.endDate,
     required this.description,
   });
 
@@ -27,21 +27,18 @@ class WorkExperienceCard extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               role,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
             ),
             Text(
               company,
               style: Theme.of(context).textTheme.titleMedium,
             ),
             Text(
-              '${startDate.monthAsString} ${startDate.year} - ${endDate.monthAsString} ${endDate.year}',
+              '${startDate.monthAsString} ${startDate.year} - ${endDate == null ? 'Present' : '${endDate!.monthAsString} ${endDate!.year}'}',
               style: Theme.of(context).textTheme.labelMedium,
             ),
             SizedBox(height: 16),
