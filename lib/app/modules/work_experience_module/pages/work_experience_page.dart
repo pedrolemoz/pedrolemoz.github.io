@@ -26,14 +26,11 @@ class WorkExperiencePage extends StatelessWidget {
         return Scaffold(
           drawer: NavigationMenuDrawer(),
           appBar: AppBar(
+            centerTitle: true,
             title: Text(
               'Work Experience',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
             ),
-            centerTitle: true,
           ),
           body: SingleChildScrollView(
             child: _MobileDevelopmentExperienceContent(),
@@ -68,6 +65,12 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   WorkExperienceCard(
+                    role: 'Software Engineer',
+                    company: 'FTeam',
+                    startDate: DateTime(2023, 4),
+                    description: 'Just started my journey here! Waiting for interesting challenges.',
+                  ),
+                  WorkExperienceCard(
                     role: 'Specialist Software Developer',
                     company: 'Compass.uol',
                     startDate: DateTime(2022, 4),
@@ -79,7 +82,7 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                     ].merge,
                   ),
                   WorkExperienceCard(
-                    role: 'Software Engineer (Mid level)',
+                    role: 'Software Engineer',
                     company: 'Code Tecnologia',
                     startDate: DateTime(2021, 2),
                     endDate: DateTime(2022, 4),
@@ -91,7 +94,7 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                     ].merge,
                   ),
                   WorkExperienceCard(
-                    role: 'Software Engineer (Junior)',
+                    role: 'Software Engineer',
                     company: 'MusicPlayce',
                     startDate: DateTime(2020, 6),
                     endDate: DateTime(2021, 1),
