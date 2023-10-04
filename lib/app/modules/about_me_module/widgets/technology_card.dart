@@ -10,8 +10,8 @@ class TechnologyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 1,
-      margin: EdgeInsets.all(4),
-      child: Container(
+      margin: const EdgeInsets.all(4),
+      child: SizedBox(
         width: 135,
         height: 135,
         child: Column(
@@ -19,12 +19,12 @@ class TechnologyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.network(asset, scale: 9),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               label,
               style: Theme.of(context).textTheme.titleMedium,
               textAlign: TextAlign.center,
-            )
+            ),
           ],
         ),
       ),
