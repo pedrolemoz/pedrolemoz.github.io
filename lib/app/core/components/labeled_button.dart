@@ -22,7 +22,7 @@ class LabeledButton extends StatelessWidget {
           child: Row(
             children: [
               Icon(icon),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Text(
                 text,
                 style: Theme.of(context).textTheme.bodyLarge,

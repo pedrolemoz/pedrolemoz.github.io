@@ -19,7 +19,7 @@ class InitialPage extends StatelessWidget {
         return Scaffold(
           body: ListView(
             children: [
-              NavigationMenuHeader(),
+              const NavigationMenuHeader(),
               Padding(
                 padding: const EdgeInsets.only(top: 72),
                 child: _InitialPageContent(),
@@ -30,7 +30,7 @@ class InitialPage extends StatelessWidget {
       },
       onMobile: () {
         return Scaffold(
-          drawer: NavigationMenuDrawer(),
+          drawer: const NavigationMenuDrawer(),
           appBar: AppBar(),
           body: _InitialPageContent(),
         );
@@ -47,12 +47,12 @@ class _InitialPageContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundImage: NetworkImage(Assets.me),
             maxRadius: 120,
             minRadius: 50,
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Text(
             'Pedro Lemos',
             style: Theme.of(context)
@@ -61,13 +61,13 @@ class _InitialPageContent extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             'Software Engineer',
             style: Theme.of(context).textTheme.headlineSmall,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Wrap(
             alignment: WrapAlignment.center,
             children: [
@@ -88,7 +88,7 @@ class _InitialPageContent extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Wrap(
             alignment: WrapAlignment.center,
             children: [

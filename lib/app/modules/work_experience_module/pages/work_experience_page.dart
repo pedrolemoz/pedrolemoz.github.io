@@ -15,7 +15,7 @@ class WorkExperiencePage extends StatelessWidget {
       onDesktop: () {
         return Scaffold(
           body: ListView(
-            children: [
+            children: const [
               NavigationMenuHeader(),
               _MobileDevelopmentExperienceContent(),
             ],
@@ -24,15 +24,18 @@ class WorkExperiencePage extends StatelessWidget {
       },
       onMobile: () {
         return Scaffold(
-          drawer: NavigationMenuDrawer(),
+          drawer: const NavigationMenuDrawer(),
           appBar: AppBar(
             centerTitle: true,
             title: Text(
               'Work Experience',
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(fontWeight: FontWeight.bold),
             ),
           ),
-          body: SingleChildScrollView(
+          body: const SingleChildScrollView(
             child: _MobileDevelopmentExperienceContent(),
           ),
         );
@@ -57,9 +60,9 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
               'Mobile Development',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: 600),
+              constraints: const BoxConstraints(maxWidth: 600),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,7 +71,8 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                     role: 'Software Engineer',
                     company: 'FTeam',
                     startDate: DateTime(2023, 4),
-                    description: 'Just started my journey here! Waiting for interesting challenges.',
+                    description:
+                        'Just started my journey here! Waiting for interesting challenges.',
                   ),
                   WorkExperienceCard(
                     role: 'Specialist Software Developer',
@@ -76,7 +80,7 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                     startDate: DateTime(2022, 4),
                     endDate: DateTime(2022, 12),
                     description: [
-                      'Responsible for maintain and improve Ancar\'s apps for giant malls in several places in Brazil.',
+                      "Responsible for maintain and improve Ancar's apps for giant malls in several places in Brazil.",
                       'Working on refactoring the app architecture, following SOLID principles, aiming to keep the project cleaner, decoupled and scalable as possible.',
                       'Futhermore, I was responsible for fixing critical bugs in an internal app for São Salvador Alimentos, and to perform some improvements.',
                     ].merge,

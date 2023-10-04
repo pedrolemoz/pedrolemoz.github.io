@@ -11,9 +11,9 @@ class AboutMeModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, __) => AboutMePage(),
+          child: (_, __) => const AboutMePage(),
           transition: TransitionType.custom,
           customTransition: routeTransition,
-        )
+        ),
       ];
 }

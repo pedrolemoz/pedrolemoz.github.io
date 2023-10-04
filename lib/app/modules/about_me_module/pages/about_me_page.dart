@@ -16,7 +16,7 @@ class AboutMePage extends StatelessWidget {
       onDesktop: () {
         return Scaffold(
           body: ListView(
-            children: [
+            children: const [
               NavigationMenuHeader(),
               _AboutMeContent(),
             ],
@@ -25,7 +25,7 @@ class AboutMePage extends StatelessWidget {
       },
       onMobile: () {
         return Scaffold(
-          drawer: NavigationMenuDrawer(),
+          drawer: const NavigationMenuDrawer(),
           appBar: AppBar(
             title: Text(
               'About me',
@@ -36,7 +36,7 @@ class AboutMePage extends StatelessWidget {
             ),
             centerTitle: true,
           ),
-          body: SingleChildScrollView(child: _AboutMeContent()),
+          body: const SingleChildScrollView(child: _AboutMeContent()),
         );
       },
     );
@@ -45,7 +45,7 @@ class AboutMePage extends StatelessWidget {
 
 class _AboutMeContent extends StatelessWidget {
   static final _phrases = [
-    'I\'m a Software Engineer passionate for programming, writing code since 2018.',
+    "I'm a Software Engineer passionate for programming, writing code since 2018.",
     'Finishing the Bachelor of Science in Computer Science at IFCE.',
     'I am an enthusiast of Software Architecture and new technologies.',
     'I like to develop large and complex applications, and always give the user the best experience possible.',
@@ -69,7 +69,7 @@ class _AboutMeContent extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineLarge,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             SizedBox(
               width: 600,
               child: Text(
@@ -78,63 +78,63 @@ class _AboutMeContent extends StatelessWidget {
                 textAlign: TextAlign.justify,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               'Technologies',
               style: Theme.of(context).textTheme.headlineLarge,
               textAlign: TextAlign.left,
             ),
-            SizedBox(height: 8),
-            SizedBox(
+            const SizedBox(height: 8),
+            const SizedBox(
               width: 600,
               child: Wrap(
                 alignment: WrapAlignment.spaceBetween,
                 children: [
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.flutter,
                     label: 'Flutter',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.dart,
                     label: 'Dart',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.python,
                     label: 'Python',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.kotlin,
                     label: 'Kotlin',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.swift,
                     label: 'Swift',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.c,
                     label: 'C',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.cSharp,
                     label: 'C#',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.java,
                     label: 'Java',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.javascript,
                     label: 'Javascript',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.typescript,
                     label: 'Typescript',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.git,
                     label: 'Git',
                   ),
-                  const TechnologyCard(
+                  TechnologyCard(
                     asset: Assets.firebase,
                     label: 'Firebase',
                   ),

@@ -1,0 +1,13 @@
+include: package:flutterando_analysis/flutter.yaml
+
+linter:
+  rules:
+    avoid_redundant_argument_values: false
+    cascade_invocations: false
+    parameter_assignments: false
+    avoid_equals_and_hash_code_on_mutable_classes: false
+    use_to_and_as_if_applicable: false
+    avoid_bool_literals_in_conditional_expressions: false
+    unnecessary_lambdas: false
+    lines_longer_than_80_chars: false
+    avoid_positional_boolean_parameters: false

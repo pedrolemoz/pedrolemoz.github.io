@@ -22,7 +22,7 @@ class WorkExperienceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 1,
-      margin: EdgeInsets.all(4),
+      margin: const EdgeInsets.all(4),
       child: Container(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -31,7 +31,10 @@ class WorkExperienceCard extends StatelessWidget {
           children: [
             Text(
               role,
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(fontWeight: FontWeight.bold),
             ),
             Text(
               company,
@@ -41,7 +44,7 @@ class WorkExperienceCard extends StatelessWidget {
               '${startDate.monthAsString} ${startDate.year} - ${endDate == null ? 'Present' : '${endDate!.monthAsString} ${endDate!.year}'}',
               style: Theme.of(context).textTheme.labelMedium,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               description,
               style: Theme.of(context).textTheme.bodyMedium,

@@ -11,9 +11,9 @@ class InitialModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, __) => InitialPage(),
+          child: (_, __) => const InitialPage(),
           transition: TransitionType.custom,
           customTransition: routeTransition,
-        )
+        ),
       ];
 }

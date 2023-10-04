@@ -11,9 +11,9 @@ class WorkExperienceModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, __) => WorkExperiencePage(),
+          child: (_, __) => const WorkExperiencePage(),
           transition: TransitionType.custom,
           customTransition: routeTransition,
-        )
+        ),
       ];
 }
