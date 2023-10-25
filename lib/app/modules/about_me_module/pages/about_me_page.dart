@@ -123,6 +123,10 @@ class _AboutMeContent extends StatelessWidget {
                     label: 'Java',
                   ),
                   TechnologyCard(
+                    asset: Assets.spring,
+                    label: 'Spring Boot',
+                  ),
+                  TechnologyCard(
                     asset: Assets.javascript,
                     label: 'Javascript',
                   ),

@@ -17,6 +17,7 @@ class Assets {
   static const python = '$_base/python.png';
   static const swift = '$_base/swift.png';
   static const typescript = '$_base/typescript.png';
+  static const spring = '$_base/spring-boot.png';
 
   static final resumeEnglish = Uri.parse(
     '$_base/pedro_lemos_resume_english.pdf',
