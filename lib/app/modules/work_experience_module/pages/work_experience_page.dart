@@ -71,8 +71,13 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                     role: 'Software Engineer',
                     company: 'FTeam',
                     startDate: DateTime(2023, 4),
-                    description:
-                        'Just started my journey here! Waiting for interesting challenges.',
+                    description: [
+                      'At first, was acting as a consultant at Nasajon, helping the development of an app called Gestão de Serviços.',
+                      'I guided developers to build this app, by sharing my experience on mobile development and software architecture.',
+                      'Then, I was responsible of establishing the architectural specification for an internal project called Ship.',
+                      'This architectural specification mostly follows Clean Architecture and SOLID principles, but is focused on reduce boilerplate code.',
+                      'Futhermore, I was a Tech Leader in the development of an app called App do Colportor, for IATEC.',
+                    ].merge,
                   ),
                   WorkExperienceCard(
                     role: 'Specialist Software Developer',
