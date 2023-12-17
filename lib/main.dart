@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'app/root_module.dart';
-import 'app/root_widget.dart';
+import 'app/base_module.dart';
+import 'app/base_widget.dart';
 
 void main() => runApp(
       ModularApp(
-        module: RootModule(),
-        child: const RootWidget(),
+        module: BaseModule(),
+        child: const BaseWidget(),
       ),
     );

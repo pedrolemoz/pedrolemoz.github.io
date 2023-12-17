@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class RootWidget extends StatelessWidget {
-  const RootWidget({super.key});
+class BaseWidget extends StatelessWidget {
+  const BaseWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

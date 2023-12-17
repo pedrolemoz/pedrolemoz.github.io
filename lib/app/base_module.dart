@@ -5,7 +5,7 @@ import 'modules/about_me_module/about_me_module.dart';
 import 'modules/initial_module/initial_module.dart';
 import 'modules/work_experience_module/work_experience_module.dart';
 
-class RootModule extends Module {
+class BaseModule extends Module {
   @override
   List<Bind> get binds => const [];
 

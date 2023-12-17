@@ -76,7 +76,8 @@ class _MobileDevelopmentExperienceContent extends StatelessWidget {
                       'I guided developers to build this app, by sharing my experience on mobile development and software architecture.',
                       'Then, I was responsible of establishing the architectural specification for an internal project called Ship.',
                       'This architectural specification mostly follows Clean Architecture and SOLID principles, but is focused on reduce boilerplate code.',
-                      'Futhermore, I was a Tech Leader in the development of an app called App do Colportor, for IATEC.',
+                      'Futhermore, I was a Tech Lead in the development of an app called App do Colportor, for IATEC.',
+                      "Currently, I'm working at Senior Sistemas, working on an app called Ponto Mobile, implementing facial recognition functionality.",
                     ].merge,
                   ),
                   WorkExperienceCard(
