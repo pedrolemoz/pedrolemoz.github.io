@@ -26,7 +26,20 @@
             "degree": "Bachelor of Science",
             "field": "Computer Science",
             "startDate": "2019-01-01T00:00:00.000",
-            "endDate": "2023-12-01T00:00:00.000"
+            "endDate": "2023-12-01T00:00:00.000",
+            "description": "My undergraduate thesis theme is “Technical analysis of Software Architectures in the development of apps for Smartphones”. I have a strong interest in Theory of Computation, Compilers and Software Engineering.",
+            "tags": [
+                "Mobile Development",
+                "Software Engineering",
+                "Software Architecture",
+                "Design Patterns",
+                "Digital Image Processing",
+                "Automata Theory",
+                "Regular Languages",
+                "Compilers",
+                "Programming paradigms",
+                "Numerical methods"
+            ]
         }
     ],
     "experiences": [
