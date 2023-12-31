@@ -37,43 +37,43 @@ class _InitialPageState extends State<InitialPage> {
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1024),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 64),
-            child: BlocBuilder<PersonBloc, IAppState>(
-              bloc: personBloc,
-              builder: (context, state) {
-                if (state is InitialState || state is GettingPersonDataState) {
-                  return const CircularProgressIndicator();
-                }
+          child: BlocBuilder<PersonBloc, IAppState>(
+            bloc: personBloc,
+            builder: (context, state) {
+              if (state is InitialState || state is GettingPersonDataState) {
+                return const CircularProgressIndicator();
+              }
 
-                if (state is UnableToGetPersonDataState) {
-                  return Text(
-                    'Cannot get person data.\n\n${state.exception}',
-                    style: textTheme.headlineMedium,
-                  );
-                }
+              if (state is UnableToGetPersonDataState) {
+                return Text(
+                  'Cannot get person data.\n\n${state.exception}',
+                  style: textTheme.headlineMedium,
+                );
+              }
 
-                final personDataModel =
-                    (state as SuccessfullyGotPersonDataState).personDataModel;
+              final personDataModel =
+                  (state as SuccessfullyGotPersonDataState).personDataModel;
 
-                return Row(
-                  children: [
-                    Flexible(
+              return Row(
+                children: [
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 64),
                       child: _LeftSide(
                         personDataModel: personDataModel,
                         scrollController: scrollController,
                       ),
                     ),
-                    Flexible(
-                      child: _RightSide(
-                        personDataModel: personDataModel,
-                        scrollController: scrollController,
-                      ),
+                  ),
+                  Flexible(
+                    child: _RightSide(
+                      personDataModel: personDataModel,
+                      scrollController: scrollController,
                     ),
-                  ],
-                );
-              },
-            ),
+                  ),
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -179,6 +179,7 @@ class _RightSide extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(vertical: 64),
       child: Column(
         children: [
           Text(

@@ -53,7 +53,6 @@ class ExperienceCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: ThemeColors.darkViolet,
                           borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: ThemeColors.lightViolet),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8),
