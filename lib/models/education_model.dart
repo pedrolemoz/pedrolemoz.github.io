@@ -6,6 +6,8 @@ final class EducationModel {
   final String field;
   final DateTime startDate;
   final DateTime? endDate;
+  final String description;
+  final List<String> tags;
 
   const EducationModel({
     required this.institution,
@@ -13,6 +15,8 @@ final class EducationModel {
     required this.field,
     required this.startDate,
     this.endDate,
+    required this.description,
+    required this.tags,
   });
 
   Map<String, dynamic> toMap() {
@@ -24,6 +28,8 @@ final class EducationModel {
       if (endDate != null) ...{
         'endDate': endDate?.toIso8601String(),
       },
+      'description': description,
+      'tags': tags,
     };
   }
 
@@ -34,6 +40,8 @@ final class EducationModel {
       field: map['field'],
       startDate: DateTime.parse(map['startDate']),
       endDate: map['endDate'] != null ? DateTime.parse(map['endDate']) : null,
+      description: map['description'],
+      tags: List<String>.from(map['tags']),
     );
   }
 

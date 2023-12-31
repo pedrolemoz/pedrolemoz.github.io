@@ -8,6 +8,7 @@ import '../controllers/person/person_events.dart';
 import '../controllers/person/person_states.dart';
 import '../models/person_data_model.dart';
 import '../packages/service_locator/service_locator.dart';
+import '../widgets/education_card.dart';
 import '../widgets/expandable_button.dart';
 import '../widgets/experience_card.dart';
 import '../widgets/social_media_button.dart';
@@ -186,6 +187,18 @@ class _RightSide extends StatelessWidget {
             personDataModel.fullDescription,
             style: textTheme.bodyMedium,
             textAlign: TextAlign.justify,
+          ),
+          const SizedBox(height: 32),
+          ListView.separated(
+            shrinkWrap: true,
+            itemCount: personDataModel.education.length,
+            separatorBuilder: (context, index) => const SizedBox(
+              height: 32,
+            ),
+            itemBuilder: (context, index) {
+              final educationModel = personDataModel.education.elementAt(index);
+              return EducationCard(educationModel: educationModel);
+            },
           ),
           const SizedBox(height: 32),
           ListView.separated(

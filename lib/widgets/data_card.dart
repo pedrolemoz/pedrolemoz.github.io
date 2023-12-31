@@ -7,16 +7,16 @@ class DataCard extends StatelessWidget {
   final DateTime startDate;
   final DateTime? endDate;
   final String title;
-  final String description;
-  final List<Widget> tags;
+  final String? description;
+  final List<Widget>? tags;
 
   const DataCard({
     super.key,
     required this.startDate,
     this.endDate,
     required this.title,
-    required this.description,
-    required this.tags,
+    this.description,
+    this.tags,
   });
 
   @override
@@ -46,19 +46,23 @@ class DataCard extends StatelessWidget {
                   color: ThemeColors.white,
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                description,
-                style: textTheme.bodyMedium,
-                textAlign: TextAlign.justify,
-              ),
-              const SizedBox(height: 16),
-              Wrap(
-                runSpacing: 8,
-                spacing: 8,
-                alignment: WrapAlignment.start,
-                children: tags,
-              ),
+              if (description != null) ...[
+                const SizedBox(height: 8),
+                Text(
+                  description!,
+                  style: textTheme.bodyMedium,
+                  textAlign: TextAlign.justify,
+                ),
+              ],
+              if (tags != null && tags!.isNotEmpty) ...[
+                const SizedBox(height: 16),
+                Wrap(
+                  runSpacing: 8,
+                  spacing: 8,
+                  alignment: WrapAlignment.start,
+                  children: tags!,
+                ),
+              ],
             ],
           ),
         ),
