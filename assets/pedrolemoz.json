@@ -27,18 +27,13 @@
             "field": "Computer Science",
             "startDate": "2019-01-01T00:00:00.000",
             "endDate": "2023-12-01T00:00:00.000",
-            "description": "My undergraduate thesis theme is “Technical analysis of Software Architectures in the development of apps for Smartphones”. I have a strong interest in Theory of Computation, Compilers and Software Engineering.",
+            "description": "My undergraduate thesis theme is “Technical analysis of Software Architectures in the development of apps for Smartphones”. I was one of the speakers of COMSOLID/SiC 2022. I talked about SOLID principles, and how to use them in real life projects. Futhermore, I was the auxiliary teacher of the Fundamentals of Programming discipline in 2019. I have a strong interest in Software Engineering, Theory of Computation and Compilers.",
             "tags": [
                 "Mobile Development",
-                "Software Engineering",
                 "Software Architecture",
-                "Design Patterns",
                 "Digital Image Processing",
                 "Automata Theory",
-                "Regular Languages",
-                "Compilers",
-                "Programming paradigms",
-                "Numerical methods"
+                "Compilers"
             ]
         }
     ],
