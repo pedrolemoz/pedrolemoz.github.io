@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pedrolemoz/widgets/data_card.dart';
 
 import '../models/experience_model.dart';
 import '../utils/colors.dart';
-import '../utils/date_time_extension.dart';
+import 'data_card.dart';
 
 class ExperienceCard extends StatelessWidget {
   final ExperienceModel experienceModel;
