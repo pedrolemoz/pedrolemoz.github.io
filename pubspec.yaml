@@ -1,0 +1,36 @@
+name: pedrolemoz
+description: My personal page
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  unicons: ^2.1.1
+  intl: ^0.18.1
+  http: ^1.1.2
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+  auto_injector: 2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutterando_analysis: ^0.0.2
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+          weight: 700
