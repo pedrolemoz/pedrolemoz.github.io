@@ -7,12 +7,12 @@
         "fullDescription": "I have a Bachelor’s degree in Computer Science from the Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE). I started my journey in programming in 2018, and since the end of 2019, I have been focusing my efforts on mobile app development, primarily using the Flutter framework with the Dart language. Throughout my career, I have explored various technologies, expanding my knowledge base. I am a computer enthusiast, always seeking challenges that allow me to grow professionally. I value good coding practices and believe that clean and efficient code is crucial for the success of any project. Additionally, I am passionate about software architecture, understanding its importance in building robust and scalable systems.",
         "contacts": [
             {
-                "name": "LinkedIn",
-                "url": "https://www.linkedin.com/in/pedrolemoz/"
-            },
-            {
                 "name": "GitHub",
                 "url": "https://github.com/pedrolemoz"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/pedrolemoz/"
             },
             {
                 "name": "E-mail",
