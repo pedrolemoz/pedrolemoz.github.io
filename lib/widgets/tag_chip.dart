@@ -19,9 +19,10 @@ class TagChip extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Text(
-          label,
+          label.toUpperCase(),
           style: textTheme.labelMedium?.copyWith(
-            color: ThemeColors.lightViolet,
+            color: ThemeColors.white,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
