@@ -6,8 +6,9 @@ import '../controllers/person/person_bloc.dart';
 import '../controllers/person/person_events.dart';
 import '../controllers/person/person_states.dart';
 import '../packages/service_locator/service_locator.dart';
-import 'left_side.dart';
-import 'right_side.dart';
+import '../utils/layout_extension.dart';
+import 'data_section.dart';
+import 'information_section.dart';
 
 class InitialPage extends StatefulWidget {
   const InitialPage({super.key});
@@ -33,6 +34,7 @@ class _InitialPageState extends State<InitialPage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Padding(
@@ -57,13 +59,26 @@ class _InitialPageState extends State<InitialPage> {
                 final personDataModel =
                     (state as SuccessfullyGotPersonDataState).personDataModel;
 
-                return Row(
-                  children: [
-                    Flexible(
-                      flex: 6,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 64),
-                        child: LeftSide(
+                if (size.isDesktop) {
+                  return Row(
+                    children: [
+                      Flexible(
+                        flex: 6,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 64),
+                          child: InformationSection(
+                            personDataModel: personDataModel,
+                            scrollController: scrollController,
+                            aboutKey: aboutKey,
+                            educationKey: educationKey,
+                            experienceKey: experienceKey,
+                          ),
+                        ),
+                      ),
+                      const Spacer(flex: 2),
+                      Flexible(
+                        flex: 10,
+                        child: DataSection(
                           personDataModel: personDataModel,
                           scrollController: scrollController,
                           aboutKey: aboutKey,
@@ -71,19 +86,29 @@ class _InitialPageState extends State<InitialPage> {
                           experienceKey: experienceKey,
                         ),
                       ),
-                    ),
-                    const Spacer(flex: 2),
-                    Flexible(
-                      flex: 10,
-                      child: RightSide(
+                    ],
+                  );
+                }
+
+                return SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      InformationSection(
                         personDataModel: personDataModel,
                         scrollController: scrollController,
                         aboutKey: aboutKey,
                         educationKey: educationKey,
                         experienceKey: experienceKey,
                       ),
-                    ),
-                  ],
+                      DataSection(
+                        personDataModel: personDataModel,
+                        scrollController: scrollController,
+                        aboutKey: aboutKey,
+                        educationKey: educationKey,
+                        experienceKey: experienceKey,
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
