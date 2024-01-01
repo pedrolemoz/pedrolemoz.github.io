@@ -18,6 +18,8 @@ class EducationCard extends StatelessWidget {
           '${educationModel.degree} in ${educationModel.field} · ${educationModel.institution}',
       description: educationModel.description,
       tags: educationModel.tags.map((tag) => TagChip(label: tag)).toList(),
+      logo: educationModel.logo,
+      imageFormat: educationModel.imageFormat,
     );
   }
 }

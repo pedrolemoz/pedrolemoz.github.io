@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../enums/image_format.dart';
 import '../utils/colors.dart';
 import '../utils/date_time_extension.dart';
 
@@ -9,6 +10,8 @@ class DataCard extends StatelessWidget {
   final String title;
   final String? description;
   final List<Widget>? tags;
+  final String logo;
+  final ImageFormat imageFormat;
 
   const DataCard({
     super.key,
@@ -17,6 +20,8 @@ class DataCard extends StatelessWidget {
     required this.title,
     this.description,
     this.tags,
+    required this.logo,
+    required this.imageFormat,
   });
 
   @override
@@ -27,13 +32,26 @@ class DataCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 4.4),
-          child: Text(
-            '${startDate.formattedDate} — ${endDate?.formattedDate ?? 'Present'}'
-                .toUpperCase(),
-            style: textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w700),
-          ),
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 4.4),
+              child: Text(
+                '${startDate.formattedDate} — ${endDate?.formattedDate ?? 'Present'}'
+                    .toUpperCase(),
+                style: textTheme.labelMedium
+                    ?.copyWith(fontWeight: FontWeight.w700),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 150),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.network(logo),
+              ),
+            ),
+          ],
         ),
         const SizedBox(width: 16),
         Flexible(

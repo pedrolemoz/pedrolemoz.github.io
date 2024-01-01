@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import '../enums/image_format.dart';
+
 final class EducationModel {
   final String institution;
   final String degree;
@@ -8,6 +10,9 @@ final class EducationModel {
   final DateTime? endDate;
   final String description;
   final List<String> tags;
+  final ImageFormat imageFormat;
+  final String url;
+  final String logo;
 
   const EducationModel({
     required this.institution,
@@ -17,6 +22,9 @@ final class EducationModel {
     this.endDate,
     required this.description,
     required this.tags,
+    required this.imageFormat,
+    required this.logo,
+    required this.url,
   });
 
   Map<String, dynamic> toMap() {
@@ -30,6 +38,9 @@ final class EducationModel {
       },
       'description': description,
       'tags': tags,
+      'url': url,
+      'logo': logo,
+      'logoFormat': imageFormat.value,
     };
   }
 
@@ -42,6 +53,9 @@ final class EducationModel {
       endDate: map['endDate'] != null ? DateTime.parse(map['endDate']) : null,
       description: map['description'],
       tags: List<String>.from(map['tags']),
+      imageFormat: ImageFormat.fromString(map['logoFormat']),
+      logo: map['logo'],
+      url: map['url'],
     );
   }
 

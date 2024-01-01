@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import '../enums/image_format.dart';
+
 final class ExperienceModel {
   final DateTime startDate;
   final DateTime? endDate;
@@ -7,6 +9,9 @@ final class ExperienceModel {
   final String company;
   final String description;
   final List<String> technologies;
+  final ImageFormat imageFormat;
+  final String url;
+  final String logo;
 
   const ExperienceModel({
     required this.startDate,
@@ -15,6 +20,9 @@ final class ExperienceModel {
     required this.company,
     required this.description,
     required this.technologies,
+    required this.imageFormat,
+    required this.logo,
+    required this.url,
   });
 
   Map<String, dynamic> toMap() {
@@ -27,6 +35,9 @@ final class ExperienceModel {
       'company': company,
       'description': description,
       'technologies': technologies,
+      'url': url,
+      'logo': logo,
+      'logoFormat': imageFormat.value,
     };
   }
 
@@ -38,6 +49,9 @@ final class ExperienceModel {
       company: map['company'],
       description: map['description'],
       technologies: List<String>.from(map['technologies']),
+      imageFormat: ImageFormat.fromString(map['logoFormat']),
+      logo: map['logo'],
+      url: map['url'],
     );
   }
 

@@ -19,6 +19,8 @@ class ExperienceCard extends StatelessWidget {
       tags: experienceModel.technologies
           .map((tech) => TagChip(label: tech))
           .toList(),
+      logo: experienceModel.logo,
+      imageFormat: experienceModel.imageFormat,
     );
   }
 }
