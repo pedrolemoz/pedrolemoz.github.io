@@ -21,6 +21,7 @@ class ExperienceCard extends StatelessWidget {
           .toList(),
       logo: experienceModel.logo,
       imageFormat: experienceModel.imageFormat,
+      url: experienceModel.url,
     );
   }
 }

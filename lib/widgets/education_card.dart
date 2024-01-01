@@ -20,6 +20,7 @@ class EducationCard extends StatelessWidget {
       tags: educationModel.tags.map((tag) => TagChip(label: tag)).toList(),
       logo: educationModel.logo,
       imageFormat: educationModel.imageFormat,
+      url: educationModel.url,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:unicons/unicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../models/person_data_model.dart';
 import '../widgets/expandable_button.dart';
@@ -105,20 +106,24 @@ class _LeftSideState extends State<LeftSide> {
         ),
         const Expanded(child: SizedBox(height: 16)),
         Row(
-          children: [
-            SocialMediaButton(
-              icon: UniconsLine.github,
-              onClick: () {},
-            ),
-            SocialMediaButton(
-              icon: UniconsLine.linkedin,
-              onClick: () {},
-            ),
-            SocialMediaButton(
-              icon: UniconsLine.envelope,
-              onClick: () {},
-            ),
-          ],
+          children: widget.personDataModel.contacts
+              .map(
+                (contact) => SocialMediaButton(
+                  icon: switch (contact.name) {
+                    'GitHub' => UniconsLine.github,
+                    'LinkedIn' => UniconsLine.linkedin,
+                    'E-mail' => UniconsLine.envelope,
+                    String() => UniconsLine.link,
+                  },
+                  onClick: () async {
+                    final uri = Uri.parse(contact.url);
+                    if (await canLaunchUrl(uri)) {
+                      await launchUrl(uri);
+                    }
+                  },
+                ),
+              )
+              .toList(),
         ),
       ],
     );
