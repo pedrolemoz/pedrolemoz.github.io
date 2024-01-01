@@ -39,7 +39,7 @@ class _InitialPageState extends State<InitialPage> {
         padding: const EdgeInsets.symmetric(horizontal: 64),
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 1024),
+            constraints: const BoxConstraints(maxWidth: 1200),
             child: BlocBuilder<PersonBloc, IAppState>(
               bloc: personBloc,
               builder: (context, state) {
@@ -60,6 +60,7 @@ class _InitialPageState extends State<InitialPage> {
                 return Row(
                   children: [
                     Flexible(
+                      flex: 6,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 64),
                         child: LeftSide(
@@ -71,7 +72,9 @@ class _InitialPageState extends State<InitialPage> {
                         ),
                       ),
                     ),
+                    const Spacer(flex: 2),
                     Flexible(
+                      flex: 10,
                       child: RightSide(
                         personDataModel: personDataModel,
                         scrollController: scrollController,
