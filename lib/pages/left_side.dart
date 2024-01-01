@@ -101,10 +101,6 @@ class _LeftSideState extends State<LeftSide> {
               label: 'Experience',
               onClick: () => _moveToOffset(offset: _experienceOffset),
             ),
-            ExpandableButton(
-              label: 'Projects',
-              onClick: () {},
-            ),
           ],
         ),
         const Expanded(child: SizedBox(height: 16)),

@@ -35,32 +35,44 @@ class _InitialPageState extends State<InitialPage> {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      body: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1024),
-          child: BlocBuilder<PersonBloc, IAppState>(
-            bloc: personBloc,
-            builder: (context, state) {
-              if (state is InitialState || state is GettingPersonDataState) {
-                return const CircularProgressIndicator();
-              }
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 64),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1024),
+            child: BlocBuilder<PersonBloc, IAppState>(
+              bloc: personBloc,
+              builder: (context, state) {
+                if (state is InitialState || state is GettingPersonDataState) {
+                  return const CircularProgressIndicator();
+                }
 
-              if (state is UnableToGetPersonDataState) {
-                return Text(
-                  'Cannot get person data.\n\n${state.exception}',
-                  style: textTheme.headlineMedium,
-                );
-              }
+                if (state is UnableToGetPersonDataState) {
+                  return Text(
+                    'Cannot get person data.\n\n${state.exception}',
+                    style: textTheme.headlineMedium,
+                  );
+                }
 
-              final personDataModel =
-                  (state as SuccessfullyGotPersonDataState).personDataModel;
+                final personDataModel =
+                    (state as SuccessfullyGotPersonDataState).personDataModel;
 
-              return Row(
-                children: [
-                  Flexible(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 64),
-                      child: LeftSide(
+                return Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 64),
+                        child: LeftSide(
+                          personDataModel: personDataModel,
+                          scrollController: scrollController,
+                          aboutKey: aboutKey,
+                          educationKey: educationKey,
+                          experienceKey: experienceKey,
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      child: RightSide(
                         personDataModel: personDataModel,
                         scrollController: scrollController,
                         aboutKey: aboutKey,
@@ -68,19 +80,10 @@ class _InitialPageState extends State<InitialPage> {
                         experienceKey: experienceKey,
                       ),
                     ),
-                  ),
-                  Flexible(
-                    child: RightSide(
-                      personDataModel: personDataModel,
-                      scrollController: scrollController,
-                      aboutKey: aboutKey,
-                      educationKey: educationKey,
-                      experienceKey: experienceKey,
-                    ),
-                  ),
-                ],
-              );
-            },
+                  ],
+                );
+              },
+            ),
           ),
         ),
       ),
