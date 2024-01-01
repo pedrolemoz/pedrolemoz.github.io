@@ -32,28 +32,14 @@ class DataCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 4.4),
-              child: Text(
-                '${startDate.formattedDate} — ${endDate?.formattedDate ?? 'Present'}'
-                    .toUpperCase(),
-                style: textTheme.labelMedium
-                    ?.copyWith(fontWeight: FontWeight.w700),
-              ),
-            ),
-            const SizedBox(height: 16),
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 150),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: Image.network(logo),
-              ),
-            ),
-          ],
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 80),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image.network(logo),
+          ),
         ),
-        const SizedBox(width: 16),
+        const SizedBox(width: 24),
         Flexible(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +48,15 @@ class DataCard extends StatelessWidget {
                 title,
                 style: textTheme.titleMedium?.copyWith(
                   color: ThemeColors.white,
+                  fontWeight: FontWeight.bold,
                 ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                '${startDate.formattedDate} — ${endDate?.formattedDate ?? 'Present'}'
+                    .toUpperCase(),
+                style: textTheme.labelMedium
+                    ?.copyWith(fontWeight: FontWeight.w200),
               ),
               if (description != null) ...[
                 const SizedBox(height: 8),
