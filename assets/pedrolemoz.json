@@ -47,7 +47,7 @@
             "company": "FTeam",
             "description": "At first, was acting as a consultant at Nasajon, helping the development of an app called Gestão de Serviços. I guided developers to build this app, by sharing my experience on mobile development and software architecture. Then, I was responsible for establishing the architectural specification for an internal project called Ship. This architectural specification mostly follows Clean Architecture and SOLID principles, but is focused on reducing boilerplate code. Furthermore, I was a Tech Lead in the development of an app called App do Colportor, for IATEC. Currently, I’m working at Senior Sistemas, working on an app called Ponto Mobile, implementing facial recognition functionality in the application.",
             "url": "https://www.fteam.dev/",
-            "logo": "https://raw.githubusercontent.com/Flutterando/README-Template/master/readme_assets/sponsor-logo.png",
+            "logo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/fteam-logo.png",
             "logoFormat": "jpeg",
             "technologies": [
                 "Flutter",
