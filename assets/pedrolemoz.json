@@ -17,6 +17,14 @@
             {
                 "name": "E-mail",
                 "url": "mailto:lemozxpedro@gmail.com"
+            },
+            {
+                "name": "Resume (English)",
+                "url": "https://github.com/pedrolemoz/pedrolemoz.github.io/blob/master/assets/pedro_lemos_resume_english.pdf"
+            },
+            {
+                "name": "Resume (Portuguese)",
+                "url": "https://github.com/pedrolemoz/pedrolemoz.github.io/blob/master/assets/pedro_lemos_resume_portuguese.pdf"
             }
         ]
     },
