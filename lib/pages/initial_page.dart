@@ -38,7 +38,7 @@ class _InitialPageState extends State<InitialPage> {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 64),
+        padding: EdgeInsets.symmetric(horizontal: size.isDesktop ? 64 : 32),
         child: Center(
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 1200),
