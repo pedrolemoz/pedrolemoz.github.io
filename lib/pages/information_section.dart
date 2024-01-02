@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:unicons/unicons.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../models/person_data_model.dart';
 import '../utils/layout_extension.dart';
 import '../widgets/expandable_button.dart';
-import '../widgets/social_media_button.dart';
+import '../widgets/external_link_button.dart';
 
 class InformationSection extends StatefulWidget {
   final GlobalKey aboutKey;
@@ -68,6 +66,7 @@ class _InformationSectionState extends State<InformationSection> {
     if (size.isDesktop) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
             widget.personDataModel.fullName,
@@ -103,25 +102,19 @@ class _InformationSectionState extends State<InformationSection> {
             ],
           ),
           const Expanded(child: SizedBox(height: 16)),
-          Row(
-            children: widget.personDataModel.contacts
-                .map(
-                  (contact) => SocialMediaButton(
-                    icon: switch (contact.name) {
-                      'GitHub' => UniconsLine.github,
-                      'LinkedIn' => UniconsLine.linkedin,
-                      'E-mail' => UniconsLine.envelope,
-                      String() => UniconsLine.link,
-                    },
-                    onClick: () async {
-                      final uri = Uri.parse(contact.url);
-                      if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri);
-                      }
-                    },
-                  ),
-                )
-                .toList(),
+          ListView.separated(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: widget.personDataModel.contacts.length,
+            separatorBuilder: (context, index) => const SizedBox(height: 8),
+            itemBuilder: (context, index) {
+              final contactModel =
+                  widget.personDataModel.contacts.elementAt(index);
+              return ExternalLinkButton(
+                name: contactModel.name,
+                url: contactModel.url,
+              );
+            },
           ),
         ],
       );
@@ -146,25 +139,19 @@ class _InformationSectionState extends State<InformationSection> {
           style: textTheme.titleMedium,
         ),
         const SizedBox(height: 16),
-        Row(
-          children: widget.personDataModel.contacts
-              .map(
-                (contact) => SocialMediaButton(
-                  icon: switch (contact.name) {
-                    'GitHub' => UniconsLine.github,
-                    'LinkedIn' => UniconsLine.linkedin,
-                    'E-mail' => UniconsLine.envelope,
-                    String() => UniconsLine.link,
-                  },
-                  onClick: () async {
-                    final uri = Uri.parse(contact.url);
-                    if (await canLaunchUrl(uri)) {
-                      await launchUrl(uri);
-                    }
-                  },
-                ),
-              )
-              .toList(),
+        ListView.separated(
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: widget.personDataModel.contacts.length,
+          separatorBuilder: (context, index) => const SizedBox(height: 8),
+          itemBuilder: (context, index) {
+            final contactModel =
+                widget.personDataModel.contacts.elementAt(index);
+            return ExternalLinkButton(
+              name: contactModel.name,
+              url: contactModel.url,
+            );
+          },
         ),
       ],
     );
