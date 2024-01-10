@@ -11,9 +11,9 @@ export default function Home() {
           <span className={styles.shortDescription}>Mobile Developer</span>
           <nav>
             <ul>
-              <li>About</li>
-              <li>Education</li>
-              <li>Experiences</li>
+              <li>{"About".toUpperCase()}</li>
+              <li>{"Education".toUpperCase()}</li>
+              <li>{"Experiences".toUpperCase()}</li>
             </ul>
           </nav>
         </div>
@@ -47,12 +47,12 @@ export default function Home() {
               <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBZYzAHdhHGCmwUki5AoPxzNXP7Ism4ROjKKeaAVe9Ml0tHdy6kgAtrc9qjYHthWk1MmY&usqp=CAU"
                 alt="Logo"
-                width={150}
-                height={150} />
+                width={80}
+                height={80} />
               <div>
                 <h4 className={styles.sectionTitle}>Bachelor of Science in Computer Science · Instituto Federal de Educação, Ciência e Tecnologia do Ceará
                 </h4>
-                <span>JAN 2019 - DEZ 2023</span>
+                <span className={styles.sectionPeriod}>JAN 2019 — DEZ 2023</span>
                 <p className={styles.sectionFullDescription}>
                   My undergraduate thesis theme is “Technical analysis of Software Architectures in the development of
                   apps for Smartphones”. I was one of the speakers of COMSOLID/SiC 2022. I talked about SOLID principles,

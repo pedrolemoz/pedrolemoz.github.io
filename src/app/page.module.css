@@ -44,6 +44,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15;
+  color: var(--lightGray);
 }
 
 .data {
@@ -84,4 +85,14 @@
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
+}
+
+.sectionPeriod {
+  display: block;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5;
+  color: var(--lightGray);
 }
