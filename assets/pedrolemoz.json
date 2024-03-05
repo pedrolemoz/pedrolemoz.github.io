@@ -2,7 +2,7 @@
     "information": {
         "firstName": "Pedro",
         "lastName": "Lemos",
-        "bio": "Computer Scientist and Software Engineer at FTeam",
+        "bio": "Computer Scientist | Specialist Software Engineer",
         "shortDescription": "Mobile Developer",
         "fullDescription": "I have a Bachelor’s degree in Computer Science from the Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE). I started my journey in programming in 2018, and since the end of 2019, I have been focusing my efforts on mobile app development, primarily using the Flutter framework with the Dart language. Throughout my career, I have explored various technologies, expanding my knowledge base. I am a computer enthusiast, always seeking challenges that allow me to grow professionally. I value good coding practices and believe that clean and efficient code is crucial for the success of any project. Additionally, I am passionate about software architecture, understanding its importance in building robust and scalable systems.",
         "contacts": [
@@ -51,7 +51,7 @@
     "experiences": [
         {
             "startDate": "2023-04-01T00:00:00.000",
-            "role": "Software Engineer",
+            "role": "Specialist Software Engineer",
             "company": "FTeam",
             "description": "At first, was acting as a consultant at Nasajon, helping the development of an app called Gestão de Serviços. I guided developers to build this app, by sharing my experience on mobile development and software architecture. Then, I was responsible for establishing the architectural specification for an internal project called Ship. This architectural specification mostly follows Clean Architecture and SOLID principles, but is focused on reducing boilerplate code. Furthermore, I was a Tech Lead in the development of an app called App do Colportor, for IATEC. I worked at Senior Sistemas, within an app called Ponto Mobile, implementing facial recognition functionality. Currently, I’m developing a streaming application's backend for Centro Dom Bosco, and simultaneously working on the application that will consume this backend.",
             "url": "https://www.fteam.dev/",
@@ -73,7 +73,7 @@
         {
             "startDate": "2022-04-01T00:00:00.000",
             "endDate": "2022-12-01T00:00:00.000",
-            "role": "Specialist Software Developer",
+            "role": "Specialist Software Engineer",
             "company": "Compass.uol",
             "description": "Responsible for maintain and improve Ancar’s apps for giant malls in several places in Brazil. Working on refactoring the app architecture, following SOLID principles, aiming to keep the project cleaner, decoupled and scalable as possible. Furthermore, I was responsible for fixing critical bugs in an internal app for São Salvador Alimentos, and to perform some improvements.",
             "url": "https://compass.uol/en/home/",
