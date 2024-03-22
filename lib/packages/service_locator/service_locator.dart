@@ -2,6 +2,7 @@ import 'package:auto_injector/auto_injector.dart';
 import 'package:http/http.dart' as http;
 
 import '../../controllers/person/person_bloc.dart';
+import '../../controllers/privacy_policy/privacy_policy_bloc.dart';
 import '../http_client/http_client.dart';
 import '../http_client/i_http_client.dart';
 
@@ -14,6 +15,7 @@ final class ServiceLocator {
     _autoInjector.addInstance(http.Client());
     _autoInjector.addSingleton<IHttpClient>(HttpClient.new);
     _autoInjector.addSingleton<PersonBloc>(PersonBloc.new);
+    _autoInjector.addSingleton<PrivacyPolicyBloc>(PrivacyPolicyBloc.new);
     _autoInjector.commit();
   }
 

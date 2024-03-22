@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'pages/initial_page.dart';
+import 'pages/policy_page.dart';
+import 'utils/routes.dart';
 import 'utils/theme.dart';
 
 class EntryPoint extends StatelessWidget {
@@ -11,7 +13,12 @@ class EntryPoint extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme,
-      home: const InitialPage(),
+      routes: {
+        '/': (context) => const InitialPage(),
+        '/apps/smartnotes/policy/': (context) {
+          return const PolicyPage(url: Routes.smartNotesPolicy);
+        },
+      },
     );
   }
 }
