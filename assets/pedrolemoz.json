@@ -50,7 +50,26 @@
     ],
     "experiences": [
         {
+            "startDate": "2024-04-01T00:00:00.000",
+            "role": "Software Engineer",
+            "company": "CloudWalk, Inc",
+            "description": "Working on Growth & Onboarding",
+            "url": "https://cloudwalk.io/",
+            "logo": "https://media.licdn.com/dms/image/C560BAQHq7UlNntjm2g/company-logo_200_200/0/1645134807443/cloudwalk_inc_logo?e=1720656000&v=beta&t=Rwq8C4BlwNAYTdrNI6n7PuyoIQJOZYrPqYyXAL1KcLo",
+            "logoFormat": "jpeg",
+            "technologies": [
+                "Flutter",
+                "Dart",
+                "Software Architecture",
+                "Android",
+                "iOS",
+                "Firebase",
+                "SOLID"
+            ]
+        },
+        {
             "startDate": "2023-04-01T00:00:00.000",
+            "endDate": "2024-04-01T00:00:00.000",
             "role": "Specialist Software Engineer",
             "company": "FTeam",
             "description": "At first, was acting as a consultant at Nasajon, helping the development of an app called Gestão de Serviços. I guided developers to build this app, by sharing my experience on mobile development and software architecture. Then, I was responsible for establishing the architectural specification for an internal project called Ship. This architectural specification mostly follows Clean Architecture and SOLID principles, but is focused on reducing boilerplate code. Furthermore, I was a Tech Lead in the development of an app called App do Colportor, for IATEC. I worked at Senior Sistemas, within an app called Ponto Mobile, implementing facial recognition functionality. Currently, I’m developing a streaming application's backend for Centro Dom Bosco, and simultaneously working on the application that will consume this backend.",
