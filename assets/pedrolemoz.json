@@ -53,17 +53,25 @@
             "startDate": "2024-04-01T00:00:00.000",
             "role": "Software Engineer",
             "company": "CloudWalk, Inc",
-            "description": "Working on Growth & Onboarding",
+            "description": "Worked in the Growth & Onboarding area of the InfinitePay app, focusing on optimizing customer conversions through strategic communications such as notifications, in-app messages, and deeplinks. Responsible for implementing A/B tests using the Amplitude Experiments platform and SDK, contributing to the continuous improvement of the user experience. Integrated push notification and in-app message platforms, including Iterable and Firebase Cloud Messaging, as well as managing native plugins like APNs on iOS. Developed and implemented key features in the app, such as the CNAE change for individual merchants, fixes in phone confirmation messages, improvements to the smoothness of the banner carousel animation, the new client referral system, and the addition of a financial education section. Collaborated with the team to implement significant changes related to Dart 3, introducing new coding standards that prioritize the use of language features over third-party libraries (such as dartz, freezed with build_runner, equatable, among others). Engaged in discussions to optimize the app's size and introduced a new approach to rendering SVGs using CustomPainter through an open-source library I am developing called SVG Painter.",
             "url": "https://cloudwalk.io/",
             "logo": "https://media.licdn.com/dms/image/C560BAQHq7UlNntjm2g/company-logo_200_200/0/1645134807443/cloudwalk_inc_logo?e=1720656000&v=beta&t=Rwq8C4BlwNAYTdrNI6n7PuyoIQJOZYrPqYyXAL1KcLo",
             "logoFormat": "jpeg",
             "technologies": [
                 "Flutter",
                 "Dart",
-                "Software Architecture",
+                "Third-party SDKs",
+                "Growth",
+                "Marketing",
+                "Onboarding",
+                "Push notifications",
+                "In-App notifications",
+                "Deep links",
+                "Kotlin",
+                "Swift",
                 "Android",
                 "iOS",
-                "SOLID"
+                "Clean Architecture"
             ]
         },
         {
