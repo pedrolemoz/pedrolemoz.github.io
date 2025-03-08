@@ -1,5 +1,5 @@
 flutter pub get
-flutter build web --web-renderer canvaskit
+flutter build web
 rm -rf .dart_tool/
 rm -rf .vscode/
 rm -rf android/

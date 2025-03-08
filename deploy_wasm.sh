@@ -4,7 +4,7 @@ flutter upgrade
 flutter clean
 rm -rf pubspec.lock
 flutter pub get
-flutter build web --wasm --omit-type-checks
+flutter build web --wasm
 rm -rf .dart_tool/
 rm -rf .vscode/
 rm -rf android/
