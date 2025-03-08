@@ -1,11 +1,11 @@
 {
-    "name": "Pedro Lemos",
-    "short_name": "Pedro Lemos",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#10002b",
-    "theme_color": "#10002b",
-    "description": "My personal website",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false
+  "name": "Pedro Lemos",
+  "short_name": "Pedro Lemos",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#10002b",
+  "theme_color": "#10002b",
+  "description": "My personal website",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
 }

@@ -1,24 +1,24 @@
 name: pedrolemoz
 description: My personal page
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.1 <4.0.0'
+  sdk: ^3.7.0
 
 dependencies:
   flutter:
     sdk: flutter
 
-  unicons: ^2.1.1
-  intl: ^0.19.0
-  http: ^1.1.2
-  bloc: ^8.1.2
-  flutter_bloc: ^8.1.3
-  auto_injector: ^2.0.3
-  url_launcher: ^6.2.2
-  flutter_markdown: ^0.6.22
+  unicons: ^3.0.0
+  intl: ^0.20.2
+  http: ^1.3.0
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.0
+  auto_injector: ^2.1.0
+  url_launcher: ^6.3.1
+  flutter_markdown: ^0.7.6+2
 
 dev_dependencies:
   flutter_test:
