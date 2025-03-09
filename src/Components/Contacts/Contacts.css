@@ -1,0 +1,21 @@
+.contacts {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactLabel {
+  text-decoration: solid;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #929fb1;
+}
+
+.contactLabel:hover {
+  text-decoration: solid;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #e3e8f0;
+}

@@ -1,0 +1,38 @@
+.dataCard {
+  display: flex;
+  gap: 24px;
+}
+
+.dataCardTexts {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dataCardDateInfo {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #929fb1;
+}
+
+.dataCardImage {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 16px;
+}
+
+.dataCardTitle {
+  font-weight: bold;
+  font-size: 16;
+  letter-spacing: 0.15px;
+  color: #e3e8f0;
+}
+
+.dataCardDescription {
+  font-weight: 500;
+  font-size: 14;
+  letter-spacing: 0.25px;
+  color: #929fb1;
+}

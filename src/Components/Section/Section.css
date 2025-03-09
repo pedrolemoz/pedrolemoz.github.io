@@ -1,0 +1,13 @@
+.section {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  color: #e3e8f0;
+}

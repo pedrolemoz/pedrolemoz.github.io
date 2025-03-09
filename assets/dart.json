@@ -1,0 +1,98 @@
+{
+    "Triple A": {
+        "prefix": "aaa",
+        "description": "Triple A structure",
+        "body": [
+            "test('Should $1', () async {",
+            "// Arrange\n",
+            "// Act\n",
+            "// Assert\n",
+            "});"
+        ]
+    },
+    "Size": {
+        "prefix": "size",
+        "description": "Size from Media Query",
+        "body": [
+            "final size = MediaQuery.of(context).size;"
+        ]
+    },
+    "Color Scheme": {
+        "prefix": "colorScheme",
+        "description": "Color Scheme from Theme",
+        "body": [
+            "final colorScheme = Theme.of(context).colorScheme;"
+        ]
+    },
+    "Text theme": {
+        "prefix": "textTheme",
+        "description": "Text Theme from Theme",
+        "body": [
+            "final textTheme = Theme.of(context).textTheme;"
+        ]
+    },
+    "Modular 6 Module": {
+        "prefix": "module",
+        "description": "Snippet to create Modules with Modular 6",
+        "body": [
+            "import 'package:flutter_modular/flutter_modular.dart';\n",
+            "class $1Module extends Module {",
+            "  @override",
+            "  void binds(Injector i) {",
+            "    i.add($2.new);",
+            "  }\n",
+            "  @override",
+            "  void routes(RouteManager r) {",
+            "    r.child('/$3', child: (context) => $4());",
+            "  }",
+            "}"
+        ]
+    },
+    "Root Widget": {
+        "prefix": "root",
+        "description": "Root Widget",
+        "body": [
+            "import 'package:flutter/material.dart';\n",
+            "class RootWidget extends StatelessWidget {",
+            "  const RootWidget({super.key});\n",
+            "  @override",
+            "  Widget build(BuildContext context) {",
+            "    return MaterialApp.router(",
+            "      routeInformationParser: Modular.routeInformationParser,",
+            "      routerDelegate: Modular.routerDelegate,",
+            "      debugShowCheckedModeBanner: false,",
+            "      theme: ThemeData.dark(),",
+            "    );",
+            "  }",
+            "}"
+        ]
+    },
+    "Network verifier": {
+        "prefix": "network",
+        "description": "Network verifier",
+        "body": [
+            "final hasActiveNetwork = await _networkDataSource.hasActiveNetwork();\n",
+            "if (hasActiveNetwork) {",
+            "  $1",
+            "}\n\n",
+            "throw NoInternetConnectionAvaliableException();"
+        ]
+    },
+    "Adapter boilerplate": {
+        "prefix": "adapter",
+        "description": "Adapter boilerplate",
+        "body": [
+            "import 'dart:convert';\n",
+            "class ${EntityName}Adapter {",
+            "  static Map<String, dynamic> toMap(${EntityName} entity) {",
+            "    return {};",
+            "  }\n",
+            "  static ${EntityName} fromMap(Map<String, dynamic> map) {",
+            "    return ${EntityName}();",
+            "  }\n",
+            "  static String toJSON(${EntityName} entity) => json.encode(toMap(entity));\n",
+            "  static ${EntityName} fromJSON(String source) => fromMap(jsonDecode(source));",
+            "}\n"
+        ]
+    }
+}
