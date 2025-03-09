@@ -1,7 +1,17 @@
-import { PersonData } from "../Entities/PersonData";
-import { contactFromJSON } from "./ContactAdapter";
-import { educationFromJSON } from "./EducationAdapter";
-import { experienceFromJSON } from "./ExperienceAdapter";
+import { Contact, contactFromJSON } from "./Contact";
+import { Education, educationFromJSON } from "./Education";
+import { Experience, experienceFromJSON } from "./Experience";
+
+export interface PersonData {
+  firstName: string;
+  lastName: string;
+  bio: string;
+  shortDescription: string;
+  fullDescription: string;
+  contacts: Contact[];
+  education: Education[];
+  experiences: Experience[];
+}
 
 export function personDataFromJSON(data: any): PersonData {
   return {

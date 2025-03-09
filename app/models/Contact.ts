@@ -1,4 +1,7 @@
-import { Contact } from "../Entities/Contact";
+export interface Contact {
+  name: string;
+  url: string;
+}
 
 export function contactFromJSON(data: any): Contact {
   return {

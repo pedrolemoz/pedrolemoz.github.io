@@ -1,4 +1,4 @@
-import { PersonData } from "../Entities/PersonData";
+import { PersonData } from "../models/PersonData";
 import { PersonDataStatus } from "./PersonDataStatus";
 
 export interface PersonDataState {
