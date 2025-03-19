@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { personDataFromJSON } from "./models/PersonData";
 import { copyWith, PersonDataState } from "./reactivity/PersonDataState";
 import { PersonDataStatus } from "./reactivity/PersonDataStatus";
-import { format } from "date-fns";
+import Section from "./Section";
+import EducationCard from "./EducationCard";
+import ExperienceCard from "./ExperienceCard";
 
 export default function App() {
   const [state, changeState] = useState<PersonDataState>({
@@ -50,122 +52,43 @@ export default function App() {
 
   const personData = state.data!;
 
-  const formatting = "LLL y";
-
   return (
-    <div className="bg-zinc-950 text-zinc-50 px-6 md:px-8">
-      <div className="flex flex-col md:flex-row md:gap-12 md:max-w-7xl max-h-screen m-auto overflow-auto md:overflow-hidden no-scrollbar">
-        <div className="flex-1 py-6 md:py-12">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-6xl font-bold">
-              {personData.firstName} {personData.lastName}
-            </h1>
-            <h2 className="text-3xl font-medium">{personData.bio}</h2>
-          </div>
-        </div>
+    <main className="bg-[#10002b] text-[#e3e8f0]">
+      <div className="max-w-7xl m-auto flex flex-col md:flex-row gap-6">
+        {/* Information Section */}
+        <section className="flex-1 flex flex-col gap-4 md:py-12 md:px-6 px-6 pt-6">
+          <h1 className="text-6xl font-bold">
+            {personData.firstName} {personData.lastName}
+          </h1>
+          <h2 className="text-2xl">{personData.bio}</h2>
+        </section>
 
-        <div className="flex-1 gap-4 md:py-12 md:overflow-y-auto no-scrollbar">
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold uppercase">About</h2>
+        {/* Data Section */}
+        <div className="flex-1 flex flex-col gap-4 md:py-12 md:px-6 px-6 pb-6">
+          <Section
+            label="About"
+            content={
               <p className="text-lg text-justify">
                 {personData.fullDescription}
               </p>
-            </div>
+            }
+          />
 
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold uppercase">Education</h2>
+          <Section
+            label="Education"
+            content={personData.education.map((education, index) => (
+              <EducationCard index={index} education={education} />
+            ))}
+          />
 
-              {personData.education.map((education, index) => (
-                <div
-                  className="flex flex-col md:flex-row gap-4"
-                  id={index.toString()}
-                >
-                  <img
-                    className="rounded-lg w-20 h-20"
-                    src={education.logo}
-                    alt={education.institution}
-                  />
-
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-2xl">
-                      {education.degree} in {education.field} @{" "}
-                      {education.institution}
-                    </h3>
-
-                    <h4 className="text-base uppercase">
-                      {format(education.startDate, formatting)} -{" "}
-                      {education.endDate != null
-                        ? format(education.endDate, formatting)
-                        : "Present"}
-                    </h4>
-
-                    <p className="text-lg text-justify">
-                      {education.description}
-                    </p>
-
-                    <div className="flex gap-2 flex-wrap">
-                      {education.tags.map((tag, index) => (
-                        <div
-                          className="text-zinc-950 bg-zinc-50 p-2 rounded-lg text-nowrap font-bold uppercase"
-                          id={index.toString()}
-                        >
-                          {tag}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold uppercase">Experiences</h2>
-
-              {personData.experiences.map((experience, index) => (
-                <div
-                  className="flex flex-col md:flex-row gap-4"
-                  id={index.toString()}
-                >
-                  <img
-                    className="rounded-lg w-20 h-20"
-                    src={experience.logo}
-                    alt={experience.company}
-                  />
-
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-2xl">
-                      {experience.role} @ {experience.company}
-                    </h3>
-
-                    <h4 className="text-base uppercase">
-                      {format(experience.startDate, formatting)} -{" "}
-                      {experience.endDate != null
-                        ? format(experience.endDate, formatting)
-                        : "Present"}
-                    </h4>
-
-                    <p className="text-lg text-justify">
-                      {experience.description}
-                    </p>
-
-                    <div className="flex gap-2 flex-wrap">
-                      {experience.technologies.map((tag, index) => (
-                        <div
-                          className="text-zinc-950 bg-zinc-50 p-2 rounded-lg text-nowrap font-bold uppercase"
-                          id={index.toString()}
-                        >
-                          {tag}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <Section
+            label="Experiences"
+            content={personData.experiences.map((experience, index) => (
+              <ExperienceCard index={index} experience={experience} />
+            ))}
+          />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
