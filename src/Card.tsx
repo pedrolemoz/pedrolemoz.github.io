@@ -11,9 +11,7 @@ export default function Card({
   endDate,
   description,
   tags,
-  index,
 }: {
-  index: number;
   imageUrl: string;
   imageAlternative: string;
   title: string;
@@ -23,7 +21,7 @@ export default function Card({
   tags: string[];
 }) {
   return (
-    <div className="flex flex-col gap-4" id={index.toString()}>
+    <div className="flex flex-col gap-4" id={title}>
       <div className="flex gap-2">
         <img
           className="rounded-lg w-20 h-20"
@@ -41,7 +39,9 @@ export default function Card({
         </div>
       </div>
 
-      <p className="text-lg text-justify">{description}</p>
+      <p className="text-lg text-justify text-[#b0b9c7] font-medium">
+        {description}
+      </p>
 
       <div className="flex flex-wrap gap-2">
         {tags.map((tag, index) => (

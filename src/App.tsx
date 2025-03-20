@@ -7,7 +7,7 @@ import { PersonDataStatus } from "./reactivity/PersonDataStatus";
 import Section from "./Section";
 import EducationCard from "./EducationCard";
 import ExperienceCard from "./ExperienceCard";
-
+import ExternalButton from "./ExternalButton";
 export default function App() {
   const [state, changeState] = useState<PersonDataState>({
     data: null,
@@ -38,16 +38,14 @@ export default function App() {
     getPersonData();
   }, []);
 
-  if (state.status == PersonDataStatus.Initial) {
-    return <h1>initial</h1>;
-  }
-
-  if (state.status == PersonDataStatus.Processing) {
-    return <h1>processing</h1>;
-  }
-
-  if (state.status == PersonDataStatus.Error) {
-    return <h1>error</h1>;
+  if (
+    state.status == PersonDataStatus.Initial ||
+    state.status == PersonDataStatus.Processing ||
+    state.status == PersonDataStatus.Error
+  ) {
+    return (
+      <main className="bg-[#10002b] text-[#e3e8f0] min-h-screen w-full"></main>
+    );
   }
 
   const personData = state.data!;
@@ -56,11 +54,19 @@ export default function App() {
     <main className="bg-[#10002b] text-[#e3e8f0]">
       <div className="max-w-7xl m-auto flex flex-col md:flex-row gap-6">
         {/* Information Section */}
-        <section className="flex-1 flex flex-col gap-4 md:py-12 md:px-6 px-6 pt-6">
-          <h1 className="text-6xl font-bold">
-            {personData.firstName} {personData.lastName}
-          </h1>
-          <h2 className="text-2xl">{personData.bio}</h2>
+        <section className="flex-1 flex flex-col gap-6 md:py-12 md:px-6 px-6 pt-6">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-5xl md:text-7xl font-bold">
+              {personData.firstName} {personData.lastName}
+            </h1>
+            <h2 className="text-2xl">{personData.bio}</h2>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            {personData.contacts.map((contact) => (
+              <ExternalButton name={contact.name} url={contact.url} />
+            ))}
+          </div>
         </section>
 
         {/* Data Section */}
@@ -68,7 +74,7 @@ export default function App() {
           <Section
             label="About"
             content={
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify text-[#b0b9c7] font-medium">
                 {personData.fullDescription}
               </p>
             }
@@ -76,15 +82,15 @@ export default function App() {
 
           <Section
             label="Education"
-            content={personData.education.map((education, index) => (
-              <EducationCard index={index} education={education} />
+            content={personData.education.map((education) => (
+              <EducationCard education={education} />
             ))}
           />
 
           <Section
             label="Experiences"
-            content={personData.experiences.map((experience, index) => (
-              <ExperienceCard index={index} experience={experience} />
+            content={personData.experiences.map((experience) => (
+              <ExperienceCard experience={experience} />
             ))}
           />
         </div>
