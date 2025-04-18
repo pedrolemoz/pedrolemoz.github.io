@@ -7,7 +7,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route
-        path="/policy/"
+        path="/policy"
         element={<PolicyPage path="policy/smartnotes/policy.md" />}
       />
     </Routes>
