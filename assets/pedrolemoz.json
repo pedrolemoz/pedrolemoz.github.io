@@ -19,12 +19,8 @@
         "url": "mailto:lemozxpedro@gmail.com"
       },
       {
-        "name": "Resume (English)",
+        "name": "Resume",
         "url": "https://raw.githubusercontent.com/pedrolemoz/pedrolemoz.github.io/master/assets/pedro_lemos_resume_english.pdf"
-      },
-      {
-        "name": "Resume (Portuguese)",
-        "url": "https://raw.githubusercontent.com/pedrolemoz/pedrolemoz.github.io/master/assets/pedro_lemos_resume_portuguese.pdf"
       }
     ]
   },
@@ -53,7 +49,7 @@
       "startDate": "2024-09-28T00:00:00.000",
       "role": "Senior Software Engineer",
       "company": "banco BV",
-      "description": "Worked in the Personal Loan and Refinancing team. Implemented questionnaires in the user journey to capture relevant data. Implemented A/B Testing with ConfigCat and Firebase Analytics to improve and evaluate user retention in dynamic experiences. Led a major refactoring of modules to ensure compliance with best coding practices ensuring the minimum 80% test coverage. Managed deployment flow using BitBucket, SonarQube, and Jenkins to ensure seamless automation and code quality.",
+      "description": "Developed key user flows in the personal loan and refinancing team, including interactive questionnaires to gather crucial customer data and personalize loan offerings. Implemented A/B testing pipelines using ConfigCat and Firebase Analytics, enabling iterative experimentation and improved user retention through dynamic content. Led a large-scale module refactoring, aligning the codebase with best practices and ensuring a consistent 80%+ test coverage, significantly improving maintainability and reliability. Managed CI/CD pipelines with Bitbucket, SonarQube, and Jenkins, optimizing the deployment process and reinforcing quality gates across the team.",
       "url": "https://www.bv.com.br/",
       "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFOjJQYVZoe6g/company-logo_200_200/company-logo_200_200/0/1719938558834/bancobv_logo?e=1747872000&v=beta&t=JLrunO4eopWsPzqiCKtvT6LBT5rKT1QWdFafXllRLjc",
       "logoFormat": "jpeg",
@@ -73,7 +69,7 @@
       "endDate": "2024-09-01T00:00:00.000",
       "role": "Software Engineer",
       "company": "CloudWalk, Inc",
-      "description": "Worked on the Growth team of InfinitePay, focusing on optimizing conversions through strategic communications, such as push notifications, in-app messages, and deep links. Implemented A/B Testing using the Amplitude Experiments SDK to evaluate user experiences, enabling new features for 50% of users. Developed a referral links section to increase the percentage of merchant users in the app. Added a financial education section and implemented functionality for cardholder users to update their CNAE (similar to NAICS) in compliance with BACEN (Brazilian Central Bank, similar to the Federal Reserve) requirements. Enhanced the carousel animation on the app's home screen, improving smoothness. Integrated the app with Firebase Cloud Messaging (FCM), Iterable SDK, and APNs for iOS. Worked on significant improvements across the app to leverage new features introduced in Dart 3, maximizing the potential of the language.",
+      "description": "Led growth-focused feature development, optimizing user conversions via strategic push notifications, in-app messages, and deep link flows. Implemented A/B Testing using the Amplitude Experiments SDK to evaluate user experiences, enabling new features for 50% of users. Developed a referral links section to increase the percentage of merchant users in the app. Delivered key compliance features, including a financial education hub and CNAE (similar to NAICS) update functionality, aligning with Brazilian Central Bank (BACEN) regulations. Enhanced UI performance by improving the home screen carousel animation for a smoother and more responsive experience. Integrated multiple messaging platforms, including Firebase Cloud Messaging (FCM), Iterable SDK, and Apple Push Notification Service (APNs), boosting communication reliability across Android and iOS. Worked on significant improvements across the app to leverage new features introduced in Dart 3, maximizing the potential of the language.",
       "url": "https://cloudwalk.io/",
       "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQF1LcnKeI_UxQ/company-logo_200_200/company-logo_200_200/0/1738709971265/cloudwalk_inc_logo?e=1749686400&v=beta&t=8dVuNpluqNsVnIIs4ish15Ei8CgIFpBMMKh56_lMt8c",
       "logoFormat": "jpeg",
@@ -99,7 +95,7 @@
       "endDate": "2024-04-01T00:00:00.000",
       "role": "Specialist Software Engineer",
       "company": "FTeam",
-      "description": "Acted as a consultant for Nasajon, mentoring their development team in building the \"Gestão de Serviços\" app. Designed an architectural specification inspired by SOLID principles and Clean Architecture, aimed at reducing code complexity for an internal application called \"Ship\". Developed the \"App do Colportor\" for the Seventh-day Adventist Church, enhancing their digital outreach capabilities. Contributed to the development of \"Ponto Mobile\" app at Senior Sistemas by implementing an advanced facial recognition feature. Built a streaming platform for Centro Dom Bosco, delivering a seamless user experience.",
+      "description": "Consulted for Nasajon, mentoring their dev team and guiding the architecture of the Gestão de Serviços app, improving team autonomy and code quality. Architected the foundation for Ship, an internal tool, by applying SOLID principles and Clean Architecture to reduce technical debt and streamline future development. Developed the App do Colportor for the Seventh-day Adventist Church, expanding their digital outreach and improving communication with field representatives. Implemented facial recognition in Ponto Mobile at Senior Sistemas, enhancing security and user authentication with cutting-edge mobile biometrics. Built a custom streaming platform for Centro Dom Bosco, delivering a smooth and engaging viewing experience for their audience.",
       "url": "https://www.fteam.dev/",
       "logo": "https://avatars.githubusercontent.com/u/63812934?s=1000",
       "logoFormat": "jpeg",
@@ -140,7 +136,7 @@
       "endDate": "2022-04-01T00:00:00.000",
       "role": "Software Engineer",
       "company": "Code Tecnologia (currently Zydon)",
-      "description": "Responsible for creating and maintaining several applications in Flutter, ensuring code quality and implementation of best practices. In collaboration with another developer, I established a standard for applications at this company by implementing a modular, scalable, and testable architecture. Additionally, we developed a comprehensive design system to be adopted across all applications.",
+      "description": "Led the development of Farm, a white-label farm management app with an offline-first architecture and real-time synchronization with Sankhya ERP. Empowered field workers to operate in remote areas, optimizing resource use. Built and maintained PCM, a white-label machinery maintenance app, streamlining issue tracking and repair workflows for field technicians. Contributed to PEC, a B2B shopping platform that simplified procurement for business clients, enhancing operational efficiency. Defined and enforced a shared architectural standard across all apps, improving maintainability, scalability, and onboarding for new developers. Designed and rolled out Code UI, a reusable design system that unified UI/UX patterns across multiple products, improving user experience and development speed.",
       "url": "https://zydon.com.br/",
       "logo": "https://media.licdn.com/dms/image/C4D0BAQHlaGOiFLkDrg/company-logo_200_200/0/1673869723398/codetecio_logo?e=2147483647&v=beta&t=SMNgdfVeXzzr7lFHHdR6m2pt3b0KtWbK-JjV8deNmlo",
       "logoFormat": "jpeg",
@@ -159,7 +155,7 @@
       "endDate": "2021-01-01T00:00:00.000",
       "role": "Software Engineer",
       "company": "MusicPlayce",
-      "description": "Responsible for maintaining the MusicPlayce app (which uses Flutter) and refactoring the project in order to implement the best development practices.",
+      "description": "Led the migration from native Android (Java) and iOS (Swift) apps to a unified Flutter codebase, following best practices to ensure performance, maintainability, and platform consistency. Developed core features including song upload, WhatsApp sharing, and interactive social validation tools, such as Instagram polls to gauge song reception and match songs with suitable artists. Delivered multiple user-facing features, enhancing collaboration between artists and songwriters and improving engagement across the platform.",
       "url": "https://musicplayce.com/",
       "logo": "https://media.licdn.com/dms/image/C4E0BAQHNaaNAAVYvWQ/company-logo_200_200/0/1630577598891/muiscplayce_logo?e=2147483647&v=beta&t=ErO7toIMSg00mAtg50vR5gGQS7hrLNRfeTav2I94zYg",
       "logoFormat": "jpeg",
