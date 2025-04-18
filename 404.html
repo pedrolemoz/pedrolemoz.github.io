@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // redirect all requests to index.html for React Router to handle
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace("/?" + "p=" + path + "&" + search + hash);
+    </script>
+  </head>
+  <body></body>
+</html>
