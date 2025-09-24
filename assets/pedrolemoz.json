@@ -48,11 +48,30 @@
     {
       "startDate": "2024-09-28T00:00:00.000",
       "role": "Senior Software Engineer",
+      "company": "Cacao",
+      "description": "Working :)",
+      "url": "https://www.cacafi.com/",
+      "logo": "https://i.imgur.com/KwUQlpi.png",
+      "logoFormat": "png",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Kotlin",
+        "Swift",
+        "Android",
+        "iOS",
+        "Clean Architecture",
+        "CI/CD"
+      ]
+    },
+    {
+      "startDate": "2024-09-28T00:00:00.000",
+      "role": "Senior Software Engineer",
       "company": "banco BV",
       "description": "Developed key user flows in the personal loan and refinancing team, including interactive questionnaires to gather crucial customer data and personalize loan offerings. Implemented A/B testing pipelines using ConfigCat and Firebase Analytics, enabling iterative experimentation and improved user retention through dynamic content. Led a large-scale module refactoring, aligning the codebase with best practices and ensuring a consistent 80%+ test coverage, significantly improving maintainability and reliability. Managed CI/CD pipelines with Bitbucket, SonarQube, and Jenkins, optimizing the deployment process and reinforcing quality gates across the team.",
       "url": "https://www.bv.com.br/",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFOjJQYVZoe6g/company-logo_200_200/company-logo_200_200/0/1719938558834/bancobv_logo?e=1756339200&v=beta&t=mqCAgUQRkhQ-JhpZpjfELA_J4i4zWK6RgAwvqIqlzI0",
-      "logoFormat": "jpeg",
+      "logo": "https://i.imgur.com/vRXyxaJ.png",
+      "logoFormat": "png",
       "technologies": [
         "Flutter",
         "Dart",
