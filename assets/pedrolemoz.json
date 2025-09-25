@@ -90,7 +90,7 @@
       "company": "CloudWalk, Inc",
       "description": "Led growth-focused feature development, optimizing user conversions via strategic push notifications, in-app messages, and deep link flows. Implemented A/B Testing using the Amplitude Experiments SDK to evaluate user experiences, enabling new features for 50% of users. Developed a referral links section to increase the percentage of merchant users in the app. Delivered key compliance features, including a financial education hub and CNAE (similar to NAICS) update functionality, aligning with Brazilian Central Bank (BACEN) regulations. Enhanced UI performance by improving the home screen carousel animation for a smoother and more responsive experience. Integrated multiple messaging platforms, including Firebase Cloud Messaging (FCM), Iterable SDK, and Apple Push Notification Service (APNs), boosting communication reliability across Android and iOS. Worked on significant improvements across the app to leverage new features introduced in Dart 3, maximizing the potential of the language.",
       "url": "https://cloudwalk.io/",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQF1LcnKeI_UxQ/company-logo_200_200/company-logo_200_200/0/1738709971265/cloudwalk_inc_logo?e=1756339200&v=beta&t=_PsT7nFKUer1G9phRwyccs_9guHBnXwEbmrE51PbAwI",
+      "logo": "https://i.imgur.com/tsjh3kU.png",
       "logoFormat": "jpeg",
       "technologies": [
         "Flutter",
