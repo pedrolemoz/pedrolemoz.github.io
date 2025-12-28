@@ -48,11 +48,11 @@
     {
       "startDate": "2025-07-01T00:00:00.000",
       "role": "Senior Software Engineer",
-      "company": "Cacao",
-      "description": "First Engineering Hire, working with the CTO, CEO, and COO to design and build the initial product, leveraging coding skills and knowledge of the Brazilian banking system. Set up app flavors for production and staging on Android and iOS, with separate names, icons, signing keys, and API endpoints for each environment. Distributed the app on Google Play Store and App Store, ensuring compliance with all the regulations regarding financial services and cryptocurrencies. This diligence led us to be approved on our 3rd submission. Built CI/CD pipelines with CodeMagic to automate production deployment to Google Play and App Store, and staging releases via TestFlight and Firebase App Distribution, streamlining release cycles. Implemented event tracking using RudderStack, improving visibility into user flows and supporting data-driven product decisions. Implemented Firebase Cloud Messaging (FCM) to deliver push notifications, enhancing user engagement. Strengthened transaction security through passkeys, reducing reliance on passwords and enhancing user protection. Performed some optimizations in the codebase, improving the general performance and polishing the user experience. Supported Brazilian Portuguese localization for a natural user experience and refined the Pix payment flow by leveraging UX and functional patterns from top Brazilian banks.",
-      "url": "https://www.cacafi.com/",
-      "logo": "https://i.imgur.com/KwUQlpi.png",
-      "logoFormat": "png",
+      "company": "Ruvo (formely Cacao)",
+      "description": "First Engineering Hire, working with the CTO, CEO, and COO to design and build the initial product, leveraging coding skills and knowledge of the Brazilian banking system. Set up app flavors for production and staging on Android and iOS, with separate names, icons, signing keys, and API endpoints for each environment. Distributed the app on Google Play Store and App Store, ensuring compliance with all the regulations regarding financial services and cryptocurrencies. This diligence led us to be approved on our 3rd submission. Built CI/CD pipelines with CodeMagic to automate production deployment to Google Play and App Store, and staging releases via TestFlight and Firebase App Distribution, streamlining release cycles. Implemented event tracking using RudderStack, improving visibility into user flows and supporting data-driven product decisions. Implemented Firebase Cloud Messaging (FCM) to deliver push notifications, enhancing user engagement. Strengthened transaction security through passkeys, reducing reliance on passwords and enhancing user protection. Performed some optimizations in the codebase, improving the general performance and polishing the user experience. Supported Brazilian Portuguese localization for a natural user experience and refined the Pix payment flow by leveraging UX and functional patterns from top Brazilian banks. Rebranded the entire application after a company rename, implementing a new design system and visual identity, reducing UI inconsistencies and improving performance and responsiveness across all screens.",
+      "url": "https://www.ruvo.com/",
+      "logo": "https://ruvo.com/HowMoneyMovesImages/Rlogo.svg",
+      "logoFormat": "svg",
       "technologies": [
         "Flutter",
         "Dart",
@@ -64,11 +64,14 @@
         "CI/CD",
         "Push notifications",
         "Passkeys",
-        "Product"
+        "Product",
+        "Rebranding",
+        "Design System"
       ]
     },
     {
       "startDate": "2024-09-28T00:00:00.000",
+      "endDate": "2025-10-01T00:00:00.000",
       "role": "Senior Software Engineer",
       "company": "banco BV",
       "description": "Developed key user flows in the personal loan and refinancing team, including interactive questionnaires to gather crucial customer data and personalize loan offerings. Implemented A/B testing pipelines using ConfigCat and Firebase Analytics, enabling iterative experimentation and improved user retention through dynamic content. Led a large-scale module refactoring, aligning the codebase with best practices and ensuring a consistent 80%+ test coverage, significantly improving maintainability and reliability. Managed CI/CD pipelines with Bitbucket, SonarQube, and Jenkins, optimizing the deployment process and reinforcing quality gates across the team.",
@@ -89,7 +92,7 @@
     {
       "startDate": "2024-04-01T00:00:00.000",
       "endDate": "2024-09-01T00:00:00.000",
-      "role": "Software Engineer",
+      "role": "Senior Software Engineer",
       "company": "CloudWalk, Inc",
       "description": "Led growth-focused feature development, optimizing user conversions via strategic push notifications, in-app messages, and deep link flows. Implemented A/B Testing using the Amplitude Experiments SDK to evaluate user experiences, enabling new features for 50% of users. Developed a referral links section to increase the percentage of merchant users in the app. Delivered key compliance features, including a financial education hub and CNAE (similar to NAICS) update functionality, aligning with Brazilian Central Bank (BACEN) regulations. Enhanced UI performance by improving the home screen carousel animation for a smoother and more responsive experience. Integrated multiple messaging platforms, including Firebase Cloud Messaging (FCM), Iterable SDK, and Apple Push Notification Service (APNs), boosting communication reliability across Android and iOS. Worked on significant improvements across the app to leverage new features introduced in Dart 3, maximizing the potential of the language.",
       "url": "https://cloudwalk.io/",
