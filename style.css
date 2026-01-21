@@ -1,0 +1,144 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: black
+}
+
+
+@media screen {
+    html {
+        font-size: calc(100vw / 49.6);
+    }
+
+    body {
+        width: 49.6rem;
+        min-height: 70.2rem;
+        margin: 0 auto;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    h1 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: black;
+
+    li {
+        list-style: none;
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.section-title {
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-text {
+    font-size: 0.75rem;
+}
+
+.listing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    div h3,
+    p {
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    div p {
+        font-weight: normal;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    li {
+        font-size: 0.75rem;
+        font-weight: normal;
+        list-style-type: disc;
+        margin-left: 1.25rem;
+    }
+}
