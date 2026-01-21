@@ -1,3 +1,4 @@
+git checkout deploy --force
 git add .
 git reset HEAD -- deploy.sh
 current_date=`date +"%Y-%m-%d %T"`
